@@ -16,7 +16,7 @@ const LANES = [
     { label: "Invite", start: "2024-07", end: "2024-10", target: "invite" },
     { label: "멀티플레이 FPS", start: "2024-12", target: "fps" },
     { label: "VR 퀴즈", start: "2024-12", target: "vrquiz" },
-    { label: "Porta", start: "2025-12", target: "porta" },
+    { label: "Parry Paws", start: "2025-12", target: "porta" },
   ]},
   { key: "research", name: "연구", color: "var(--research)", items: [
     { label: "메타버스공간정보연구실", start: "2023-05", end: "2025-07", target: "research" },
