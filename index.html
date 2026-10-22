@@ -63,7 +63,7 @@
           <div><dt>형태</dt><dd>2인 개발, 게임 시스템과 사운드 담당</dd></div>
           <div><dt>도구</dt><dd>Unity, C#</dd></div>
         </dl>
-        <p class="repo-link"><a href="https://github.com/rkdwlals/ParryPaws" target="_blank" rel="noopener">GitHub에서 코드 보기</a></p>
+        <p class="repo-link"><a href="https://github.com/rkdwlals/ParryPaws" target="_blank" rel="noopener">GitHub에서 코드 보기</a> <a href="https://github.com/rkdwlals/ParryPaws/releases/tag/v1.0" target="_blank" rel="noopener">실행 파일 받기 (Windows)</a></p>
         <p>플레이 피드백에서 &ldquo;모바일로 만들어 출시해도 좋겠다&rdquo;는 평을 받았습니다.</p>
         <div class="part part-dev">
           <h4 class="part-title"><span class="tag tag-dev">개발</span></h4>
@@ -196,9 +196,10 @@ public void PlayParry() =&gt; PlayClip(parryClip, 1f);</code></pre>
         <h3>VR&middot;MR 기반 핵심 간호술 실습을 위한 가상병실 콘텐츠</h3>
         <dl class="meta">
           <div><dt>시기</dt><dd>2024년 5월~12월</dd></div>
-          <div><dt>형태</dt><dd>2024 콘텐츠원캠퍼스 구축운영 사업, SW 개발 담당</dd></div>
+          <div><dt>형태</dt><dd>2024 콘텐츠원캠퍼스 구축운영 사업, 2인(개발·사운드 담당)</dd></div>
           <div><dt>도구</dt><dd>Unity 2D, C#</dd></div>
         </dl>
+        <p class="repo-link"><a href="https://github.com/rkdwlals/Nursing" target="_blank" rel="noopener">GitHub에서 코드 보기</a></p>
         <p>근육주사 과정을 손 씻기부터 물품 준비, 약물 주입까지 차례로 연습하는 2D 실습 콘텐츠입니다. 화면 전환 그림 2장과 오브젝트 도트 그림을 뺀 개발과 사운드를 맡았습니다.</p>
         <p>팀 전체 결과물은 콘텐츠원캠퍼스운영사무국이 공개한 소개 영상에서 볼 수 있습니다. <a href="https://youtu.be/QfA6NbieFxQ" target="_blank" rel="noopener">YouTube에서 보기</a></p>
         <div class="part part-dev">
@@ -346,7 +347,25 @@ public void PlayParry() =&gt; PlayClip(parryClip, 1f);</code></pre>
           <source src="assets/video/python-runaway-play.mp4" type="video/mp4">
         </video>
       </li>
-      <!-- TODO: What a Scrub 등 다른 완성작은 내용을 확인한 뒤 같은 형식으로 추가하세요. -->
+    </ul>
+  </section>
+
+  <section id="vision" class="section wrap" aria-labelledby="vision-title">
+    <h2 id="vision-title" class="section-title">게임 외 프로젝트: 컴퓨터 비전</h2>
+    <p class="section-lede">웹캠·영상에서 얼굴과 손을 실시간으로 인식해 프로그램을 움직이는 과제와 발표 작업입니다.</p>
+    <ul class="list">
+      <li id="sleep">
+        <h3>안면 인식 졸음 방지 시스템</h3>
+        <p>2023년 10월~12월, 학술제 발표. MediaPipe Face Mesh로 눈 위·아래 랜드마크 사이 거리를 재서, 눈을 감은 상태가 이어지면 경고음을 울리고 카카오톡 &lsquo;나에게 보내기&rsquo;로 알림을 보냅니다. Python, OpenCV, MediaPipe. <a href="https://github.com/rkdwlals/Ai_SleepDetact">GitHub</a></p>
+      </li>
+      <li id="facecam">
+        <h3>얼굴 포커싱 직캠 모듈</h3>
+        <p>2025년 5월~6월, 영상처리 강의 과제. InsightFace(SCRFD)로 영상 속 얼굴을 검출해 번호를 붙이고, 고른 사람의 얼굴 주변을 잘라 확대한 직캠 영상을 저장합니다. 확대 정도는 트랙바로 조절합니다. Python, OpenCV, InsightFace. <a href="https://github.com/rkdwlals/Face_Focusing">GitHub</a></p>
+      </li>
+      <li id="gesture">
+        <h3>MediaPipe 제스처 기반 프레젠테이션 제어</h3>
+        <p>컴퓨터비전 과제, 3인 팀 프로젝트. 웹캠 손 제스처로 PDF 슬라이드를 넘기는 발표 도구입니다. 저는 Python 데스크톱 버전(PyQt PDF 뷰어, OpenCV + MediaPipe Hands 손 인식, 사용자 제스처 등록, 쿨다운으로 오작동 방지) 구현과 발표를 맡았고, 웹 버전은 팀원이 구현했습니다.</p>
+      </li>
     </ul>
   </section>
 

@@ -24,6 +24,8 @@ const LANES = [
   { key: "research", name: "연구", color: "var(--research)", items: [
     { label: "메타버스공간정보연구실", start: "2023-05", end: "2025-07", target: "research" },
     { label: "ETRI 위탁과제", start: "2023-05", end: "2023-11", target: "research" },
+    { label: "졸음 방지", start: "2023-10", end: "2023-12", target: "sleep" },
+    { label: "직캠 모듈", start: "2025-05", end: "2025-06", target: "facecam" },
     { label: "ETRI 위탁과제", start: "2024-06", end: "2024-11", target: "research" },
     { label: "Immervis Lab", start: "2025-10", end: "2026-08", target: "research" },
   ]},
