@@ -203,3 +203,4 @@ a:focus-visible, button:focus-visible, video:focus-visible, .track-scroll:focus-
 .repo-link a { color: var(--game); font-weight: 600; text-decoration: none; }
 .repo-link a::after { content: " \2192"; }
 .repo-link a:hover { text-decoration: underline; }
+.list-video { display: block; width: 100%; max-width: 480px; margin-top: 12px; border-radius: var(--radius-m); background: #000; }
