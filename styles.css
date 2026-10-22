@@ -199,4 +199,7 @@ a:focus-visible, button:focus-visible, video:focus-visible, .track-scroll:focus-
 .team-note { font-size: 14px; color: var(--muted); border-left: 3px solid var(--game); padding-left: 12px; }
 .project-text { grid-template-columns: minmax(0, 1fr); }
 .project-text .body { max-width: 760px; }
-
+.repo-link { margin: -4px 0 16px; font-size: 15px; }
+.repo-link a { color: var(--game); font-weight: 600; text-decoration: none; }
+.repo-link a::after { content: " \2192"; }
+.repo-link a:hover { text-decoration: underline; }
