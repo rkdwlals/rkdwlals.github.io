@@ -11,11 +11,13 @@ const LANES = [
     { label: "ZZZ SFX", start: "2026-09", target: "zzz" },
   ]},
   { key: "game", name: "게임 개발", color: "var(--game)", items: [
+    { label: "파이썬 횡스크롤", start: "2023-05", target: "pygame" },
     { label: "가상병실 콘텐츠", start: "2024-05", end: "2024-12", target: "nursing" },
     { label: "래그돌 클라이밍", start: "2024-06", target: "ragdoll" },
     { label: "Invite", start: "2024-07", end: "2024-10", target: "invite" },
     { label: "멀티플레이 FPS", start: "2024-12", target: "fps" },
     { label: "VR 퀴즈", start: "2024-12", target: "vrquiz" },
+    { label: "GitDesk", start: "2025-06", target: "gitdesk" },
     { label: "Parry Paws", start: "2025-12", target: "porta" },
   ]},
   { key: "research", name: "연구", color: "var(--research)", items: [
