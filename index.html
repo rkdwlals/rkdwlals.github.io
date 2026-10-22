@@ -163,10 +163,9 @@ public void PlayParry() =&gt; PlayClip(parryClip, 1f);</code></pre>
 
     <article class="project" id="invite">
       <div class="media">
-        <div class="slot" role="img" aria-label="Invite 플레이 영상 자리">
-          <p class="slot-title">Invite 플레이 영상</p>
-          <p class="slot-note">assets/video/invite-play.mp4 를 넣으면 이 자리에 표시됩니다.</p>
-        </div>
+        <video controls preload="metadata" playsinline>
+          <source src="assets/video/invite-play.mp4" type="video/mp4">
+        </video>
       </div>
       <div class="body">
         <h3>Invite</h3>
@@ -186,8 +185,10 @@ public void PlayParry() =&gt; PlayClip(parryClip, 1f);</code></pre>
 
     <article class="project" id="nursing">
       <div class="media">
-        <iframe class="yt" src="https://www.youtube-nocookie.com/embed/QfA6NbieFxQ" title="VR·MR 기반 핵심 간호술 실습을 위한 가상병실 콘텐츠 소개 영상" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <p class="media-note">콘텐츠원캠퍼스운영사무국이 공개한 결과물 소개 영상으로, 팀 전체 작업이 담겨 있습니다. <a href="https://youtu.be/QfA6NbieFxQ">YouTube에서 보기</a></p>
+        <video controls preload="metadata" playsinline>
+          <source src="assets/video/nursing-im-play.mp4" type="video/mp4">
+        </video>
+        <p class="media-note">근육주사 실습 플레이 영상입니다.</p>
       </div>
       <div class="body">
         <h3>VR&middot;MR 기반 핵심 간호술 실습을 위한 가상병실 콘텐츠</h3>
@@ -197,6 +198,7 @@ public void PlayParry() =&gt; PlayClip(parryClip, 1f);</code></pre>
           <div><dt>도구</dt><dd>Unity 2D, C#</dd></div>
         </dl>
         <p>간호 술기를 연습하는 콘텐츠라서, 학습자가 한 행동이 맞았는지를 소리로 바로 알려주는 데 집중했습니다.</p>
+        <p>팀 전체 결과물은 콘텐츠원캠퍼스운영사무국이 공개한 소개 영상에서 볼 수 있습니다. <a href="https://youtu.be/QfA6NbieFxQ" target="_blank" rel="noopener">YouTube에서 보기</a></p>
         <ul class="did">
           <li>손 씻기 장면에 물소리, 병실 장면에 낮은 음량의 에어컨 환경음, 과정을 마치면 완료 효과음을 넣었습니다.</li>
           <li>앰플을 끌어다 부딪히면 소리가 나게 하고, 로딩 화면과 대화 넘김에도 효과음을 붙였습니다.</li>
