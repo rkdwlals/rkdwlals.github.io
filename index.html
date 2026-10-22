@@ -11,14 +11,14 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip" href="#work">본문으로 건너뛰기</a>
+<a class="skip" href="#projects">본문으로 건너뛰기</a>
 
 <header class="site-head">
   <div class="wrap head-row">
     <a class="brand" href="#top">강지민</a>
     <nav aria-label="페이지 목차">
-      <a href="#work">사운드 작업</a>
-      <a href="#games">게임 개발</a>
+      <a href="#projects">게임 개발</a>
+      <a href="#sound">사운드</a>
       <a href="#research">연구·활동</a>
       <a href="#skills">기술</a>
       <a href="#contact">연락</a>
@@ -32,7 +32,7 @@
       <span class="name">강지민</span>
       <span class="role">게임을 만들고, 그 게임에 들어갈 소리를 만듭니다.</span>
     </h1>
-    <p class="lede">순천향대학교 메타버스&amp;게임학과 4학년(2027년 2월 졸업 예정)입니다. Unity와 로블록스로 게임을 개발하면서 효과음과 BGM을 직접 넣어 왔고, 게임사운드디자인전문가과정을 수료했습니다.</p>
+    <p class="lede">순천향대학교 메타버스&amp;게임학과 4학년(2027년 2월 졸업 예정)입니다. Unity와 로블록스로 게임 시스템을 직접 구현해 왔고, 그 게임에 들어가는 효과음과 BGM도 만들었습니다. 게임사운드디자인전문가과정을 수료했습니다.</p>
   </section>
 
   <section class="tracks wrap" aria-labelledby="tracks-title">
@@ -45,9 +45,200 @@
     </div>
   </section>
 
-  <section id="work" class="section wrap" aria-labelledby="work-title">
-    <h2 id="work-title" class="section-title">사운드 작업</h2>
-    <p class="section-lede">영상 사운드 리디자인 2편과, 직접 개발한 게임에 넣은 사운드입니다. 각 작업 아래에 소리의 출처를 적어 두었습니다.</p>
+  <section id="projects" class="section wrap" aria-labelledby="projects-title">
+    <h2 id="projects-title" class="section-title">게임 개발</h2>
+    <p class="section-lede">직접 개발한 게임입니다. 작품마다 <span class="tag tag-dev">개발</span>에서 구현한 것과 <span class="tag tag-sound">사운드</span> 작업을 나눠 적었고, 팀 프로젝트는 팀원이 맡은 부분도 함께 밝혔습니다.</p>
+
+    <article class="project" id="porta">
+      <div class="media">
+        <video controls preload="metadata" playsinline>
+          <source src="assets/video/parrypaws-play.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="body">
+        <h3>Parry Paws</h3>
+        <dl class="meta">
+          <div><dt>장르</dt><dd>패링 중심의 캐주얼 2D 액션</dd></div>
+          <div><dt>시기</dt><dd>2025년 12월</dd></div>
+          <div><dt>형태</dt><dd>2인 개발, 게임 시스템과 사운드 담당</dd></div>
+          <div><dt>도구</dt><dd>Unity, C#</dd></div>
+        </dl>
+        <p>플레이 피드백에서 &ldquo;모바일로 만들어 출시해도 좋겠다&rdquo;는 평을 받았습니다.</p>
+        <div class="part part-dev">
+          <h4 class="part-title"><span class="tag tag-dev">개발</span></h4>
+          <ul class="did">
+            <li>게임의 핵심인 패링 시스템과 패링 이펙트를 구현했습니다.</li>
+            <li>캐릭터 구동과 애니메이션을 구현했습니다.</li>
+            <li>캐릭터 HP와 데미지 처리를 구현했습니다.</li>
+          </ul>
+          <p class="team-note">팀원 담당: UI, 시작 화면, 스테이지 화면, 맵</p>
+        </div>
+        <div class="part part-sound">
+          <h4 class="part-title"><span class="tag tag-sound">사운드</span></h4>
+          <p>유료 사운드 에셋을 살 수 없는 상황이어서, 적은 소리로 많은 동작을 채우는 구조부터 만들었습니다.</p>
+          <ul class="did">
+            <li>플레이어 사운드를 관리하는 PlayerSoundManager 스크립트를 직접 작성했습니다.</li>
+            <li>걷기, 구르기, 점프, 공격 4종, 찌르기, 패링, 피격, 사망 등 동작 15가지의 소리 칸을 나눴습니다.</li>
+            <li>걷기 소리는 별도 AudioSource로 분리해 움직이는 동안에만 반복 재생되게 했습니다.</li>
+            <li>게임의 핵심 동작인 패링 소리를 시작 화면 연출에도 넣었습니다.</li>
+          </ul>
+<pre class="code"><code>// 걷기 전용 소스: 움직이는 동안만 루프
+walkSource = gameObject.AddComponent&lt;AudioSource&gt;();
+walkSource.playOnAwake = false;
+walkSource.loop = true;
+walkSource.spatialBlend = 0;  // 2D
+
+public void PlayParry() =&gt; PlayClip(parryClip, 1f);</code></pre>
+          <p class="credit">소리 출처: 효과음은 직접 만든 것과 라이브러리 소스를 함께 사용, BGM은 Suno AI로 생성, 레벨 선택 화면 BGM은 에셋 팩 &lsquo;2D Dimensions&rsquo;에 포함된 음원.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="project project-text" id="gitdesk">
+      <div class="body">
+        <h3>GitDesk</h3>
+        <dl class="meta">
+          <div><dt>장르</dt><dd>코딩 학습 시뮬레이션</dd></div>
+          <div><dt>시기</dt><dd>2025년 6월</dd></div>
+          <div><dt>형태</dt><dd>&lsquo;메타버스게임개발실습&rsquo; 2인 팀 프로젝트, 서버&middot;채점&middot;GPT 연동 등 개발 담당</dd></div>
+          <div><dt>도구</dt><dd>Unity, C#, Python(Flask), OpenAI GPT API</dd></div>
+        </dl>
+        <p>개발자 인턴이 되어 회사 메신저로 받은 파이썬 문제를 푸는 게임입니다. 정답이면 재화를, 오답이면 경고를 받고, 재화로 배경과 키보드를 꾸밀 수 있습니다. 한국디지털콘텐츠학회 2025 하계종합학술대회에서 포스터로 발표해 <strong>동상</strong>을 받았습니다.</p>
+        <div class="part part-dev">
+          <h4 class="part-title"><span class="tag tag-dev">개발</span></h4>
+          <ul class="did">
+            <li>Unity에서 플레이어가 작성한 코드를 서버로 보내 실행하고 채점하는 정답 시스템을 만들었습니다.</li>
+            <li>코드 실행과 채점을 맡는 Flask 서버를 작성했습니다.</li>
+            <li>GPT를 연결해, 채점 결과에 대한 피드백이 상사의 메신저 메시지로 오게 했습니다.</li>
+          </ul>
+          <p class="team-note">팀원 담당: 메신저 화면, 컴퓨터 화면 전환 그림, 상점</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="project" id="invite">
+      <div class="media">
+        <video controls preload="metadata" playsinline>
+          <source src="assets/video/invite-play.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="body">
+        <h3>Invite</h3>
+        <dl class="meta">
+          <div><dt>장르</dt><dd>스팀펑크 2D 게임</dd></div>
+          <div><dt>시기</dt><dd>2024년 7월~10월</dd></div>
+          <div><dt>형태</dt><dd>2인 개발, 메인 개발자이자 사운드 디자이너(기획 포함)</dd></div>
+          <div><dt>도구</dt><dd>Unity, C#, AudioMixer</dd></div>
+        </dl>
+        <p>NPC와 대화하며 미니게임 세 가지를 풀어 나가는 게임입니다. 기획을 맡았고, 시작 화면과 카드 게임 UI를 뺀 개발을 했습니다.</p>
+        <div class="part part-dev">
+          <h4 class="part-title"><span class="tag tag-dev">개발</span></h4>
+          <ul class="did">
+            <li>NPC를 클릭하면 대사가 한 글자씩 나오는 대화 시스템을 만들고, 대화가 끝나면 NPC에 따라 해당 미니게임으로 넘어가게 했습니다.</li>
+            <li>카드 게임: 카드를 끌어다 카트에 넣되, 정해진 순서대로 넣어야 통과하고 가짜 카드를 넣으면 경고가 뜨게 했습니다.</li>
+            <li>퍼즐 게임: 그림 조각을 누를 때마다 90도씩 돌아가고, 모두 바로 세우면 단서가 나타나게 했습니다.</li>
+            <li>검 게임: 여러 자루 중 진짜 검을 클릭해 찾게 했습니다.</li>
+            <li>발판을 밟으면 다른 방으로 순간이동하는 텔레포트와 플레이어를 따라가는 카메라를 만들었습니다.</li>
+          </ul>
+          <p class="team-note">팀원 담당: 시작 화면, 카드 게임 UI</p>
+        </div>
+        <div class="part part-sound">
+          <h4 class="part-title"><span class="tag tag-sound">사운드</span></h4>
+          <p>게임 진행도에 맞춰 장면마다 BGM을 따로 정했습니다. 스팀펑크 분위기에 맞춰 어두운 재즈를 기본으로 두고, 초반은 느린 템포와 낮은 현악기로 스산하게, 마지막 수수께끼는 빠른 템포와 높은 관악기로 긴장감 있게 만들었습니다.</p>
+          <ul class="did">
+            <li>장면 6개에 BGM을 한 곡씩 배치했습니다.</li>
+            <li>AudioMixer를 만들어 BGM과 효과음을 모두 믹서를 거쳐 나가게 했습니다.</li>
+          </ul>
+          <p class="credit">소리 출처: BGM 6곡은 Suno AI로 생성, 종이 넘기는 효과음은 외부 소스.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="project" id="nursing">
+      <div class="media">
+        <video controls preload="metadata" playsinline>
+          <source src="assets/video/nursing-im-play.mp4" type="video/mp4">
+        </video>
+        <p class="media-note">근육주사 실습 플레이 영상입니다.</p>
+      </div>
+      <div class="body">
+        <h3>VR&middot;MR 기반 핵심 간호술 실습을 위한 가상병실 콘텐츠</h3>
+        <dl class="meta">
+          <div><dt>시기</dt><dd>2024년 5월~12월</dd></div>
+          <div><dt>형태</dt><dd>2024 콘텐츠원캠퍼스 구축운영 사업, SW 개발 담당</dd></div>
+          <div><dt>도구</dt><dd>Unity 2D, C#</dd></div>
+        </dl>
+        <p>근육주사 과정을 손 씻기부터 물품 준비, 약물 주입까지 차례로 연습하는 2D 실습 콘텐츠입니다. 화면 전환 그림 2장과 오브젝트 도트 그림을 뺀 개발과 사운드를 맡았습니다.</p>
+        <p>팀 전체 결과물은 콘텐츠원캠퍼스운영사무국이 공개한 소개 영상에서 볼 수 있습니다. <a href="https://youtu.be/QfA6NbieFxQ" target="_blank" rel="noopener">YouTube에서 보기</a></p>
+        <div class="part part-dev">
+          <h4 class="part-title"><span class="tag tag-dev">개발</span></h4>
+          <ul class="did">
+            <li>손 씻기: 마우스 왼쪽과 오른쪽 버튼을 번갈아 정해진 횟수만큼 눌러 손을 씻는 단계를 만들었습니다.</li>
+            <li>물품 준비: R키로 투약카드를 확인하고 필요한 물품을 카트로 옮기는 단계를 만들고, 필요 없는 함정 물품과 초기화(Reset) 버튼을 넣었습니다.</li>
+            <li>약물 주입: 앰플을 따고 주사기를 끌어다 약물을 주입하는 단계를 만들었습니다.</li>
+            <li>대표 피드백과 멘토링 요청을 반영해 시작 화면, 손 씻기 횟수, 대화창, 카트 함정 물품을 고쳤습니다.</li>
+            <li>디자인 파트에 필요한 그림을 문서로 정리해 요청하고, 받은 손 일러스트와 로딩 화면을 적용했습니다.</li>
+          </ul>
+          <p class="team-note">팀원 담당: 화면 전환 그림 2장, 오브젝트 도트 그림</p>
+        </div>
+        <div class="part part-sound">
+          <h4 class="part-title"><span class="tag tag-sound">사운드</span></h4>
+          <p>간호 술기를 연습하는 콘텐츠라서, 학습자가 한 행동이 맞았는지를 소리로 바로 알려주는 데 집중했습니다.</p>
+          <ul class="did">
+            <li>손 씻기 장면에 물소리, 병실 장면에 낮은 음량의 에어컨 환경음, 과정을 마치면 완료 효과음을 넣었습니다.</li>
+            <li>앰플을 끌어다 부딪히면 소리가 나게 하고, 로딩 화면과 대화 넘김에도 효과음을 붙였습니다.</li>
+            <li>VR 로비에 쓸 배경음악을 요청받아, 보사노바 리듬을 직접 찍고 Suno AI로 곡을 완성해 제출했습니다.</li>
+          </ul>
+          <p class="credit">소리 출처: 효과음은 외부 소스를 골라 배치, 로비 BGM은 직접 만든 리듬을 바탕으로 Suno AI로 생성.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="project" id="room404">
+      <div class="media">
+        <video controls preload="metadata" playsinline>
+          <source src="assets/video/room404-play.mp4" type="video/mp4">
+        </video>
+        <div class="tracklist" aria-label="직접 작곡한 BGM">
+          <p class="tracklist-title">직접 작곡한 BGM (Cubase)</p>
+          <!-- TODO: 곡 파일을 assets/audio/ 에 넣고 각 audio 태그의 주석을 푸세요. -->
+          <div class="tune"><span>SAMPLE_MADE</span><span class="tune-wait">파일 준비 중</span><!-- <audio controls preload="none" src="assets/audio/room404-sample-made.mp3"></audio> --></div>
+          <div class="tune"><span>SAMPLE_1</span><span class="tune-wait">파일 준비 중</span><!-- <audio controls preload="none" src="assets/audio/room404-sample-1.mp3"></audio> --></div>
+          <div class="tune"><span>New_Project</span><span class="tune-wait">파일 준비 중</span><!-- <audio controls preload="none" src="assets/audio/room404-new-project.mp3"></audio> --></div>
+        </div>
+      </div>
+      <div class="body">
+        <h3>room: 404</h3>
+        <dl class="meta">
+          <div><dt>장르</dt><dd>1인칭 좀비 FPS</dd></div>
+          <div><dt>형태</dt><dd>3인 개발, 서브 개발자이자 사운드 디자이너</dd></div>
+          <div><dt>도구</dt><dd>Roblox Studio, Luau, Cubase</dd></div>
+        </dl>
+        <div class="part part-dev">
+          <h4 class="part-title"><span class="tag tag-dev">개발</span></h4>
+          <ul class="did">
+            <li>총기 시스템을 구현했습니다.</li>
+            <li>좀비 NPC 시스템을 만들었습니다.</li>
+            <li>맵 일부를 디자인했습니다. 벽에 걸린 그림, 가운데 시체, 힐팩 배치 등이 제 작업입니다.</li>
+          </ul>
+        </div>
+        <div class="part part-sound">
+          <h4 class="part-title"><span class="tag tag-sound">사운드</span></h4>
+          <p>처치할 때마다 다른 소리가 나도록 킬 사운드를 단계별로 나눴고, 회복음과 재장전음, BGM은 직접 만들었습니다.</p>
+          <ul class="did">
+            <li>킬 수를 세서 1킬부터 5킬 이상까지 다섯 단계로 다른 킬 사운드가 나오는 스크립트를 작성했습니다.</li>
+            <li>구급상자 회복음과 재장전음을 직접 만들어 넣었습니다.</li>
+            <li>Cubase로 BGM 3곡을 작곡하고, 곡을 차례로 트는 재생 목록 스크립트를 만들었습니다.</li>
+          </ul>
+          <p class="credit">소리 출처: 회복음, 재장전음, BGM 3곡은 직접 제작. 킬 사운드와 총소리 등은 외부 소스를 사용했고, BGM 중 1곡은 기존 곡입니다.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section id="sound" class="section wrap" aria-labelledby="sound-title">
+    <h2 id="sound-title" class="section-title">사운드 리디자인</h2>
+    <p class="section-lede">게임 영상의 소리를 지우고 새로 입힌 작업입니다. 각 작업 아래에 소리의 출처를 적어 두었습니다.</p>
 
     <article class="project" id="zzz">
       <div class="media">
@@ -98,117 +289,6 @@
         <p class="credit">소리 출처: 효과음 라이브러리(WAV) 소스를 가공. 영상 원본의 저작권은 Smilegate RPG에 있습니다.</p>
       </div>
     </article>
-
-    <article class="project" id="porta">
-      <div class="media">
-        <video controls preload="metadata" playsinline>
-          <source src="assets/video/parrypaws-play.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="body">
-        <h3>Parry Paws</h3>
-        <dl class="meta">
-          <div><dt>장르</dt><dd>패링 중심의 캐주얼 2D 액션</dd></div>
-          <div><dt>시기</dt><dd>2025년 12월</dd></div>
-          <div><dt>형태</dt><dd>2인 개발, 개발과 사운드 담당</dd></div>
-          <div><dt>도구</dt><dd>Unity, C#</dd></div>
-        </dl>
-        <p>유료 사운드 에셋을 살 수 없는 상황이어서, 적은 소리로 많은 동작을 채우는 구조부터 만들었습니다. 플레이 피드백에서 &ldquo;모바일로 만들어 출시해도 좋겠다&rdquo;는 평을 받았습니다.</p>
-        <ul class="did">
-          <li>플레이어 사운드를 관리하는 PlayerSoundManager 스크립트를 직접 작성했습니다.</li>
-          <li>걷기, 구르기, 점프, 공격 4종, 찌르기, 패링, 피격, 사망 등 동작 15가지의 소리 칸을 나눴습니다.</li>
-          <li>걷기 소리는 별도 AudioSource로 분리해 움직이는 동안에만 반복 재생되게 했습니다.</li>
-          <li>게임의 핵심 동작인 패링 소리를 시작 화면 연출에도 넣었습니다.</li>
-        </ul>
-<pre class="code"><code>// 걷기 전용 소스: 움직이는 동안만 루프
-walkSource = gameObject.AddComponent&lt;AudioSource&gt;();
-walkSource.playOnAwake = false;
-walkSource.loop = true;
-walkSource.spatialBlend = 0;  // 2D
-
-public void PlayParry() =&gt; PlayClip(parryClip, 1f);</code></pre>
-        <p class="credit">소리 출처: 효과음은 직접 만든 것과 라이브러리 소스를 함께 사용, BGM은 Suno AI로 생성, 레벨 선택 화면 BGM은 에셋 팩 &lsquo;2D Dimensions&rsquo;에 포함된 음원.</p>
-      </div>
-    </article>
-
-    <article class="project" id="room404">
-      <div class="media">
-        <video controls preload="metadata" playsinline>
-          <source src="assets/video/room404-play.mp4" type="video/mp4">
-        </video>
-        <div class="tracklist" aria-label="직접 작곡한 BGM">
-          <p class="tracklist-title">직접 작곡한 BGM (Cubase)</p>
-          <!-- TODO: 곡 파일을 assets/audio/ 에 넣고 각 audio 태그의 주석을 푸세요. -->
-          <div class="tune"><span>SAMPLE_MADE</span><span class="tune-wait">파일 준비 중</span><!-- <audio controls preload="none" src="assets/audio/room404-sample-made.mp3"></audio> --></div>
-          <div class="tune"><span>SAMPLE_1</span><span class="tune-wait">파일 준비 중</span><!-- <audio controls preload="none" src="assets/audio/room404-sample-1.mp3"></audio> --></div>
-          <div class="tune"><span>New_Project</span><span class="tune-wait">파일 준비 중</span><!-- <audio controls preload="none" src="assets/audio/room404-new-project.mp3"></audio> --></div>
-        </div>
-      </div>
-      <div class="body">
-        <h3>room: 404</h3>
-        <dl class="meta">
-          <div><dt>장르</dt><dd>1인칭 좀비 FPS</dd></div>
-          <div><dt>형태</dt><dd>개발과 사운드 담당</dd></div>
-          <div><dt>도구</dt><dd>Roblox Studio, Luau, Cubase</dd></div>
-        </dl>
-        <p>처치할 때마다 다른 소리가 나도록 킬 사운드를 단계별로 나눴고, 회복음과 재장전음, BGM은 직접 만들었습니다.</p>
-        <ul class="did">
-          <li>킬 수를 세서 1킬부터 5킬 이상까지 다섯 단계로 다른 킬 사운드가 나오는 스크립트를 작성했습니다.</li>
-          <li>구급상자 회복음과 재장전음을 직접 만들어 넣었습니다.</li>
-          <li>Cubase로 BGM 3곡을 작곡하고, 곡을 차례로 트는 재생 목록 스크립트를 만들었습니다.</li>
-        </ul>
-        <p class="credit">소리 출처: 회복음, 재장전음, BGM 3곡은 직접 제작. 킬 사운드와 총소리 등은 외부 소스를 사용했고, BGM 중 1곡은 기존 곡입니다.</p>
-      </div>
-    </article>
-
-    <article class="project" id="invite">
-      <div class="media">
-        <video controls preload="metadata" playsinline>
-          <source src="assets/video/invite-play.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="body">
-        <h3>Invite</h3>
-        <dl class="meta">
-          <div><dt>장르</dt><dd>스팀펑크 2D 게임</dd></div>
-          <div><dt>시기</dt><dd>2024년 7월~10월</dd></div>
-          <div><dt>도구</dt><dd>Unity, AudioMixer</dd></div>
-        </dl>
-        <p>게임 진행도에 맞춰 장면마다 BGM을 따로 정했습니다. 스팀펑크 분위기에 맞춰 어두운 재즈를 기본으로 두고, 초반은 느린 템포와 낮은 현악기로 스산하게, 마지막 수수께끼는 빠른 템포와 높은 관악기로 긴장감 있게 만들었습니다.</p>
-        <ul class="did">
-          <li>장면 6개에 BGM을 한 곡씩 배치했습니다.</li>
-          <li>AudioMixer를 만들어 BGM과 효과음을 모두 믹서를 거쳐 나가게 했습니다.</li>
-        </ul>
-        <p class="credit">소리 출처: BGM 6곡은 Suno AI로 생성, 종이 넘기는 효과음은 외부 소스.</p>
-      </div>
-    </article>
-
-    <article class="project" id="nursing">
-      <div class="media">
-        <video controls preload="metadata" playsinline>
-          <source src="assets/video/nursing-im-play.mp4" type="video/mp4">
-        </video>
-        <p class="media-note">근육주사 실습 플레이 영상입니다.</p>
-      </div>
-      <div class="body">
-        <h3>VR&middot;MR 기반 핵심 간호술 실습을 위한 가상병실 콘텐츠</h3>
-        <dl class="meta">
-          <div><dt>시기</dt><dd>2024년 5월~12월</dd></div>
-          <div><dt>형태</dt><dd>2024 콘텐츠원캠퍼스 구축운영 사업, SW 개발 담당</dd></div>
-          <div><dt>도구</dt><dd>Unity 2D, C#</dd></div>
-        </dl>
-        <p>간호 술기를 연습하는 콘텐츠라서, 학습자가 한 행동이 맞았는지를 소리로 바로 알려주는 데 집중했습니다.</p>
-        <p>팀 전체 결과물은 콘텐츠원캠퍼스운영사무국이 공개한 소개 영상에서 볼 수 있습니다. <a href="https://youtu.be/QfA6NbieFxQ" target="_blank" rel="noopener">YouTube에서 보기</a></p>
-        <ul class="did">
-          <li>손 씻기 장면에 물소리, 병실 장면에 낮은 음량의 에어컨 환경음, 과정을 마치면 완료 효과음을 넣었습니다.</li>
-          <li>앰플을 끌어다 부딪히면 소리가 나게 하고, 로딩 화면과 대화 넘김에도 효과음을 붙였습니다.</li>
-          <li>VR 로비에 쓸 배경음악을 요청받아, 보사노바 리듬을 직접 찍고 Suno AI로 곡을 완성해 제출했습니다.</li>
-          <li>대표 피드백과 멘토링 요청을 반영해 시작 화면, 손 씻기 횟수, 대화창, 카트 함정 물품을 고쳤습니다.</li>
-          <li>디자인 파트에 필요한 그림을 문서로 정리해 요청하고, 받은 손 일러스트와 로딩 화면을 적용했습니다.</li>
-        </ul>
-        <p class="credit">소리 출처: 효과음은 외부 소스를 골라 배치, 로비 BGM은 직접 만든 리듬을 바탕으로 Suno AI로 생성.</p>
-      </div>
-    </article>
   </section>
 
   <section id="games" class="section wrap" aria-labelledby="games-title">
@@ -229,10 +309,6 @@ public void PlayParry() =&gt; PlayClip(parryClip, 1f);</code></pre>
       <li id="pygame">
         <h3>파이썬 경진대회: 횡스크롤 게임 &lsquo;run away baby!&rsquo;</h3>
         <p>2023년 5월, 1학년 1학기 파이썬 경진대회 출품작. Python turtle 모듈로 만든 장애물 피하기 게임입니다. 스페이스바(높은 점프)와 위쪽 화살표(낮은 점프) 두 가지 점프로 장애물을 피하고, 게임이 끝나면 버틴 시간을 보여 줍니다. <a href="https://github.com/rkdwlals/python_BeltScrollActionGame">GitHub</a></p>
-      </li>
-      <li id="gitdesk">
-        <h3>메타버스게임개발실습: 코딩 학습 게임 GitDesk</h3>
-        <p>2025년 6월, 2인 팀 프로젝트. 개발자 인턴이 되어 회사 메신저로 받은 파이썬 문제를 푸는 코딩 시뮬레이션 게임입니다. Unity에서 작성한 코드를 Flask 서버로 보내 실행&middot;채점하고, GPT 기반 피드백을 상사의 메시지로 보여 줍니다. 정답이면 재화를, 오답이면 경고를 받고, 재화로 배경과 키보드를 꾸밀 수 있습니다. 한국디지털콘텐츠학회 2025 하계종합학술대회에서 포스터로 발표해 <strong>동상</strong>을 받았습니다.</p>
       </li>
       <!-- TODO: What a Scrub 등 다른 완성작은 내용을 확인한 뒤 같은 형식으로 추가하세요. -->
     </ul>
@@ -284,6 +360,7 @@ public void PlayParry() =&gt; PlayClip(parryClip, 1f);</code></pre>
       <div><dt>엔진</dt><dd>Unity, Roblox Studio, Unreal Engine</dd></div>
       <div><dt>언어</dt><dd>C#, C++, Python, Luau</dd></div>
       <div><dt>사운드</dt><dd>Ableton Live, REAPER, Cubase, Unity AudioMixer</dd></div>
+      <div><dt>서버&middot;연동</dt><dd>Flask, OpenAI GPT API</dd></div>
       <div><dt>미들웨어</dt><dd>Wwise(Wwise-301 과정 학습)</dd></div>
     </dl>
   </section>
