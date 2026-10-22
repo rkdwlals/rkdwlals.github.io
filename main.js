@@ -12,6 +12,7 @@ const LANES = [
   ]},
   { key: "game", name: "게임 개발", color: "var(--game)", items: [
     { label: "파이썬 횡스크롤", start: "2023-05", target: "pygame" },
+    { label: "room: 404", start: "2023-10", end: "2023-12", target: "room404" },
     { label: "가상병실 콘텐츠", start: "2024-05", end: "2024-12", target: "nursing" },
     { label: "래그돌 클라이밍", start: "2024-06", target: "ragdoll" },
     { label: "Invite", start: "2024-07", end: "2024-10", target: "invite" },
