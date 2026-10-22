@@ -187,3 +187,16 @@ a:focus-visible, button:focus-visible, video:focus-visible, .track-scroll:focus-
 
 .site-foot { margin-top: 64px; padding: 48px 0 64px; border-top: 1px solid var(--line); background: var(--surface); }
 .site-foot p { margin: 8px 0 0; font-size: 20px; }
+
+/* 개발 / 사운드 구분 */
+.tag { display: inline-block; padding: 1px 8px; border-radius: var(--radius-s); font-size: 13px; font-weight: 600; line-height: 1.6; color: var(--clip-text); vertical-align: 1px; }
+.tag-dev { background: var(--game); }
+.tag-sound { background: var(--sound); }
+.part { margin-top: 20px; padding-top: 16px; border-top: 1px dashed var(--line); }
+.part-title { margin: 0 0 10px; font-size: 15px; }
+.part-dev .did li::marker { color: var(--game); }
+.part-sound .did li::marker { color: var(--sound); }
+.team-note { font-size: 14px; color: var(--muted); border-left: 3px solid var(--game); padding-left: 12px; }
+.project-text { grid-template-columns: minmax(0, 1fr); }
+.project-text .body { max-width: 760px; }
+
