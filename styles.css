@@ -131,7 +131,8 @@ a:focus-visible, button:focus-visible, video:focus-visible, .track-scroll:focus-
 }
 @media (max-width: 860px) { .project { grid-template-columns: minmax(0, 1fr); gap: 20px; } }
 .project h3 { margin: 0 0 12px; font-size: 24px; line-height: 1.35; letter-spacing: -0.01em; }
-.media video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: var(--radius-m); }
+.media video, .media .yt { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: var(--radius-m); border: 0; }
+.media-note { margin: 8px 0 0; font-size: 14px; color: var(--muted); }
 .slot {
   aspect-ratio: 16 / 9; border-radius: var(--radius-m);
   border: 2px dashed var(--line); background: var(--surface);
