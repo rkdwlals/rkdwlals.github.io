@@ -215,3 +215,39 @@ a:focus-visible, button:focus-visible, video:focus-visible, .track-scroll:focus-
 .list-media-row img { display: block; width: 100%; height: auto; border-radius: var(--radius-m); background: #000; }
 .list-media-row figcaption { margin-top: 6px; font-size: 14px; color: var(--muted); }
 @media (max-width: 600px) { .list-media-row { grid-template-columns: minmax(0, 1fr); } }
+
+/* 인쇄·PDF */
+.print-only { display: none; }
+@media print {
+  :root, :root[data-theme="dark"] {
+    --paper: #ffffff; --surface: #ffffff; --ink: #172330; --muted: #4a5663; --line: #cdd4db;
+    --sound: #d9483b; --game: #2d6cdf; --research: #1f8f80; --activity: #a97f0f; color-scheme: light;
+  }
+  @page { size: A4; margin: 14mm 12mm; }
+  body { font-size: 12.5px; line-height: 1.6; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .site-head, .skip { display: none !important; }
+  .print-only { display: block; margin: 6px 0 0; font-size: 12px; color: var(--muted); }
+  .print-url { font-size: 13px; color: var(--ink); margin-top: 12px; }
+  .wrap { max-width: none; padding: 0; }
+  .intro { padding-top: 0; padding-bottom: 16px; }
+  .intro .name { font-size: 56px; }
+  .intro .role { font-size: 20px; margin-top: 10px; }
+  .section { padding-top: 20px; padding-bottom: 8px; }
+  .section-title { font-size: 24px; break-after: avoid; }
+  .section-lede { margin-bottom: 12px; }
+  .track-scroll { overflow: visible; }
+  .track-view { min-width: 0; }
+  .project { gap: 18px; padding: 18px 0; break-inside: avoid; }
+  .project h3 { font-size: 18px; }
+  .list li, .facts li, .part, .tracklist, figure, img, video { break-inside: avoid; }
+  .site-foot { margin-top: 24px; padding: 16px 0; }
+  a { text-decoration: none; }
+  video { display: none !important; }
+  .code { white-space: pre-wrap; word-break: break-all; overflow: visible; font-size: 11px; }
+  .project { break-inside: auto; }
+  .media, .part { break-inside: avoid; }
+  img.print-poster { display: block; width: 100%; height: auto; border-radius: var(--radius-m); margin: 0; }
+  .project { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+  #llmwfc { grid-template-columns: minmax(0, 1fr); }
+  .list-video, .list-wide { max-width: 100%; }
+}
