@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>지쟈스 크라이스트 | 강지민</title>
+<meta name="description" content="천계에서 퍼즐을 풀고 열쇠를 모아 탈출구를 찾는 3D 방탈출 게임">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../notion.css">
+</head>
+<body>
+<header class="n-top"><span class="n-crumb"><a href="../index.html">강지민 | 게임 개발자</a> / 지쟈스 크라이스트</span><a class="n-top-link" href="https://github.com/rkdwlals" target="_blank" rel="noopener">GitHub</a></header>
+<main class="n-page detail">
+  <h1 class="n-title">지쟈스 크라이스트</h1>
+  <div class="n-props">
+<div class="n-prop"><div class="n-prop-k">기간</div><div class="n-prop-v">2025.10</div></div>
+<div class="n-prop"><div class="n-prop-k">분류</div><div class="n-prop-v"><span class="n-tag c-pink">3D</span><span class="n-tag c-gray">방탈출 퍼즐</span></div></div>
+<div class="n-prop"><div class="n-prop-k">장르</div><div class="n-prop-v">3D 방탈출 퍼즐</div></div>
+<div class="n-prop"><div class="n-prop-k">형태</div><div class="n-prop-v">1인 개발, 언리얼 수업 과제</div></div>
+<div class="n-prop"><div class="n-prop-k">도구</div><div class="n-prop-v">Unreal Engine 5, Blueprint</div></div>
+<div class="n-prop"><div class="n-prop-k">한 줄 소개</div><div class="n-prop-v">천계에서 퍼즐을 풀고 열쇠를 모아 탈출구를 찾는 3D 방탈출 게임</div></div>
+  </div>
+  <a class="n-back" href="../index.html#projects">◀ 돌아가기</a>
+  <div class="media"><figure class="n-fig"><img src="../assets/img/jc-welcome.jpg" alt="시작 공간. 빛나는 글씨와 실내 조명으로 분위기를 냈습니다." loading="lazy"><figcaption>시작 공간. 빛나는 글씨와 실내 조명으로 분위기를 냈습니다.</figcaption></figure><figure class="n-fig"><img src="../assets/img/jc-door.jpg" alt="E키로 여닫는 문" loading="lazy"><figcaption>E키로 여닫는 문</figcaption></figure><figure class="n-fig"><img src="../assets/img/jc-hint-text.jpg" alt="퍼즐 단서 문구" loading="lazy"><figcaption>퍼즐 단서 문구</figcaption></figure><figure class="n-fig"><img src="../assets/img/jc-hint-cones.jpg" alt="원뿔 기둥을 화살표처럼 놓아 만든 방향 힌트" loading="lazy"><figcaption>원뿔 기둥을 화살표처럼 놓아 만든 방향 힌트</figcaption></figure><figure class="n-fig"><img src="../assets/img/jc-puzzle.jpg" alt="F키로 여는 방향 입력 퍼즐 위젯" loading="lazy"><figcaption>F키로 여는 방향 입력 퍼즐 위젯</figcaption></figure><figure class="n-fig"><img src="../assets/img/jc-maps.jpg" alt="오브젝트를 하나씩 배치해 만든 맵(왼쪽)과 직접 그린 지도(오른쪽)" loading="lazy"><figcaption>오브젝트를 하나씩 배치해 만든 맵(왼쪽)과 직접 그린 지도(오른쪽)</figcaption></figure></div>
+  <div class="n-body">
+<p>죽은 사람 중 시련을 견딘 자만 다시 태어난다는 설정으로, 천계에서 퍼즐을 풀고 곳곳에 숨긴 열쇠를 모아 탈출구를 찾는 방탈출 게임입니다. 경건한 분위기와 가볍게 즐기는 퍼즐을 목표로 했습니다.</p>
+<h2 class="n-h2">개발</h2>
+<ul class="n-list">
+<li>문: E키 상호작용으로 열고 닫습니다. 타임라인과 FlipFlop으로 문이 천천히 여닫히게 하고, Lerp로 회전 각도를 조절했습니다.</li>
+<li>방향 퍼즐: 가까이 가서 F키를 누르면 위젯이 열리고, 입력 완료 버튼이나 F키로 닫힙니다. 상하좌우 버튼을 1~4로 받아 누른 순서대로 4자리 비밀번호로 바꾼 뒤 정답과 비교합니다.</li>
+<li>힌트: 원뿔 기둥을 화살표처럼 배치해 눌러야 할 방향을 알려 줍니다.</li>
+<li>열쇠: 열쇠 개수를 세고, 같은 열쇠는 중복으로 세지 않게 했습니다. 열쇠를 모두 모으면 탈출구로 나가는 엔딩입니다.</li>
+<li>맵: 넓은 플로어를 파티션처럼 나눠 하나의 큰 방으로 구성하고, 오브젝트를 하나씩 배치했습니다. 플레이어용 지도도 직접 그렸습니다.</li>
+</ul>
+<p class="callout"><span aria-hidden="true" class="callout-icon">👥</span>남은 문제: 퍼즐을 한 번 푼 뒤 캐릭터가 움직이지 않는 버그는 끝내 고치지 못했고, 배열 변환 과정에서 올바른 방향을 눌러도 오답으로 처리되는 문제가 있었습니다.</p>
+
+  </div>
+  <nav class="n-pager"><a href="ragdoll.html">← 래그돌 클라이밍</a><a href="pygame.html">run away baby! →</a></nav>
+</main>
+</body>
+</html>
