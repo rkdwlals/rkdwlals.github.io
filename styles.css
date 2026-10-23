@@ -208,3 +208,4 @@ a:focus-visible, button:focus-visible, video:focus-visible, .track-scroll:focus-
 .repo-link a + a { margin-left: 16px; }
 .media-img { display: block; width: 100%; height: auto; border-radius: var(--radius-m); background: var(--surface); }
 .media-sub { margin-top: 16px; }
+#llmwfc { grid-template-columns: minmax(0, 1fr); gap: 20px; } #llmwfc .body { max-width: 760px; }
