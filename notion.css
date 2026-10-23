@@ -162,3 +162,8 @@ img { max-width: 100%; }
 }
 .n-prop-v a, .td-note a { white-space: nowrap; }
 .n-fig { margin: 0 0 18px; } .n-fig img { display: block; width: 100%; height: auto; border-radius: 4px; } .n-fig figcaption { color: var(--muted); font-size: 14px; margin-top: 6px; }
+.ib { display: inline-block; }
+.n-label { margin: 16px 0 4px; font-size: 13.5px; font-weight: 600; color: var(--muted); }
+.n-bio { margin: 0; padding-left: 1.3em; }
+.n-bio li { margin: 3px 0; }
+.n-count { font-size: 17px; font-weight: 500; color: var(--muted); }
