@@ -160,3 +160,4 @@ img { max-width: 100%; }
   .n-card { break-inside: avoid; }
 }
 .n-prop-v a, .td-note a { white-space: nowrap; }
+.n-fig { margin: 0 0 18px; } .n-fig img { display: block; width: 100%; height: auto; border-radius: 4px; } .n-fig figcaption { color: var(--muted); font-size: 14px; margin-top: 6px; }
