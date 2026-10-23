@@ -206,3 +206,5 @@ a:focus-visible, button:focus-visible, video:focus-visible, .track-scroll:focus-
 .list-video { display: block; width: 100%; max-width: 480px; margin-top: 12px; border-radius: var(--radius-m); background: #000; }
 .did code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: 0.9em; }
 .repo-link a + a { margin-left: 16px; }
+.media-img { display: block; width: 100%; height: auto; border-radius: var(--radius-m); background: var(--surface); }
+.media-sub { margin-top: 16px; }

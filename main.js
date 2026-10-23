@@ -20,6 +20,7 @@ const LANES = [
     { label: "VR 퀴즈", start: "2024-12", target: "vrquiz" },
     { label: "GitDesk", start: "2025-06", target: "gitdesk" },
     { label: "Parry Paws", start: "2025-12", target: "porta" },
+    { label: "LLM–WFC", start: "2026-10", target: "llmwfc" },
   ]},
   { key: "research", name: "연구", color: "var(--research)", items: [
     { label: "메타버스공간정보연구실", start: "2023-05", end: "2025-07", target: "research" },
