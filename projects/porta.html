@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parry Paws | 강지민</title>
+<meta name="description" content="패링으로 투사체를 되받아치는 캐주얼 2D 액션 게임">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="../notion.css">
+</head>
+<body>
+<header class="n-top"><span class="n-crumb"><a href="../index.html">강지민 | 게임 개발자</a> / Parry Paws</span><a class="n-top-link" href="https://github.com/rkdwlals" target="_blank" rel="noopener">GitHub</a></header>
+<main class="n-page detail">
+  <h1 class="n-title">Parry Paws</h1>
+  <div class="n-props">
+<div class="n-prop"><div class="n-prop-k">기간</div><div class="n-prop-v">2025.12</div></div>
+<div class="n-prop"><div class="n-prop-k">분류</div><div class="n-prop-v"><span class="n-tag c-yellow">2D</span><span class="n-tag c-gray">액션</span></div></div>
+<div class="n-prop"><div class="n-prop-k">장르</div><div class="n-prop-v">패링 중심의 캐주얼 2D 액션</div></div>
+<div class="n-prop"><div class="n-prop-k">형태</div><div class="n-prop-v">2인 개발, 게임 시스템과 사운드 담당</div></div>
+<div class="n-prop"><div class="n-prop-k">도구</div><div class="n-prop-v">Unity, C#</div></div>
+<div class="n-prop"><div class="n-prop-k">한 줄 소개</div><div class="n-prop-v">패링으로 투사체를 되받아치는 캐주얼 2D 액션 게임</div></div>
+<div class="n-prop"><div class="n-prop-k">링크</div><div class="n-prop-v"><a href="https://github.com/rkdwlals/ParryPaws" target="_blank" rel="noopener">GitHub에서 코드 보기</a> · <a href="https://github.com/rkdwlals/ParryPaws/releases/tag/v1.0" target="_blank" rel="noopener">실행 파일 받기 (Windows)</a></div></div>
+  </div>
+  <a class="n-back" href="../index.html#projects">◀ 돌아가기</a>
+  <div class="media">
+
+<video controls="" playsinline="" poster="../assets/img/parrypaws-poster.jpg" preload="metadata">
+<source src="../assets/video/parrypaws-play.mp4" type="video/mp4"/>
+</video>
+
+</div>
+  <div class="n-body">
+
+<p>플레이 피드백에서 “모바일로 만들어 출시해도 좋겠다”는 평을 받았습니다.</p>
+
+<h2 class="n-h2">개발</h2>
+<ul class="n-list">
+<li>Q를 누르면 0.2초 동안만 패링 판정이 열리는 방식으로 패링을 만들었습니다.</li>
+<li>패링 중에 까마귀의 화살이 닿으면 쏜 까마귀에게 되돌려 보내고, 닌자의 표창은 반대 방향으로 튕겨 냅니다. 튕겨 낸 표창에 맞은 닌자는 데미지와 함께 경직됩니다.</li>
+<li>성공 판정은 투사체 쪽에서 내리고 플레이어의 <code>OnParrySuccess()</code>를 호출하게 나눠, 패링에 성공했을 때만 이펙트와 소리가 나게 했습니다.</li>
+<li>캐릭터 구동과 애니메이션, HP 4칸과 HP바 연동, 사망 후 부활을 구현했습니다.</li>
+<li>찌르기·파워 공격은 공격 지점 주변 범위 안의 적에게 데미지를 줍니다.</li>
+</ul>
+<pre class="n-code"><code>// PlayerController2D
+// Q: 0.2초 동안만 패링 판정
+void StartParryWindow()
+{
+    isParrying = true;
+    parryEndTime = Time.time + parryDuration;
+}
+
+// ArrowProjectile: 플레이어에 닿았을 때
+if (player.IsParrying)
+{
+    // 성공할 때만 이펙트·사운드
+    player.OnParrySuccess();
+    // 쏜 까마귀에게 되돌려 보냄
+    ReflectBackToOwner();
+}
+else
+{
+    player.HitByProjectile(damageToPlayer);
+}</code></pre>
+<p class="callout"><span aria-hidden="true" class="callout-icon">👥</span>팀원 담당: UI, 시작 화면, 스테이지 화면, 맵</p>
+
+
+<h2 class="n-h2">사운드</h2>
+<p>유료 사운드 에셋을 살 수 없는 상황이어서, 적은 소리로 많은 동작을 채우는 구조부터 만들었습니다.</p>
+<ul class="n-list">
+<li>플레이어 사운드를 관리하는 PlayerSoundManager 스크립트를 직접 작성했습니다.</li>
+<li>걷기, 구르기, 점프, 공격 4종, 찌르기, 패링, 피격, 사망 등 동작 15가지의 소리 칸을 나눴습니다.</li>
+<li>걷기 소리는 별도 AudioSource로 분리해 움직이는 동안에만 반복 재생되게 했습니다.</li>
+<li>게임의 핵심 동작인 패링 소리를 시작 화면 연출에도 넣었습니다.</li>
+</ul>
+<pre class="n-code"><code>// 걷기 전용 소스: 움직이는 동안만 루프
+walkSource = gameObject.AddComponent&lt;AudioSource&gt;();
+walkSource.playOnAwake = false;
+walkSource.loop = true;
+walkSource.spatialBlend = 0;  // 2D
+
+public void PlayParry() =&gt; PlayClip(parryClip, 1f);</code></pre>
+<p class="callout"><span aria-hidden="true" class="callout-icon">🎧</span>소리 출처: 효과음은 직접 만든 것과 라이브러리 소스를 함께 사용, BGM은 Suno AI로 생성, 레벨 선택 화면 BGM은 에셋 팩 ‘2D Dimensions’에 포함된 음원.</p>
+
+
+  </div>
+  <nav class="n-pager"><span></span><a href="gitdesk.html">GitDesk →</a></nav>
+</main>
+</body>
+</html>

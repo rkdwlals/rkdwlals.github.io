@@ -3,475 +3,250 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>강지민 포트폴리오</title>
-<meta name="description" content="게임 개발과 게임 사운드 작업을 함께 하는 강지민의 포트폴리오">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<title>강지민 | 게임 개발자</title>
+<meta name="description" content="게임 개발자 강지민의 포트폴리오">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="notion.css">
 </head>
 <body>
-<a class="skip" href="#projects">본문으로 건너뛰기</a>
+<header class="n-top"><span class="n-crumb">강지민 | 게임 개발자</span><a class="n-top-link" href="https://github.com/rkdwlals" target="_blank" rel="noopener">GitHub</a></header>
+<div class="n-cover"><img src="assets/img/parrypaws-poster.jpg" alt=""></div>
+<main class="n-page">
+  <h1 class="n-title">강지민 | 게임 개발자</h1>
 
-<header class="site-head">
-  <div class="wrap head-row">
-    <a class="brand" href="#top">강지민</a>
-    <nav aria-label="페이지 목차">
-      <a href="#projects">게임 개발</a>
-      <a href="#sound">사운드</a>
-      <a href="#research">연구·활동</a>
-      <a href="#skills">기술</a>
-      <a href="#contact">연락</a>
-    </nav>
+  <section class="n-profile">
+    <ul class="n-contact">
+      <li><span class="ic" aria-hidden="true">✉️</span><a href="mailto:jimin041002@gmail.com">jimin041002@gmail.com</a></li>
+      <li><span class="ic" aria-hidden="true">🔗</span><a href="https://github.com/rkdwlals" target="_blank" rel="noopener">github.com/rkdwlals</a></li>
+      <li><span class="ic" aria-hidden="true">🎓</span>순천향대학교 <span class="nowrap">메타버스&amp;게임학과</span><br>2027년 2월 졸업 예정</li>
+    </ul>
+    <div class="n-about">
+      <p class="n-lead">게임 시스템을 직접 구현하고, 그 게임에 들어갈 소리까지 만드는 개발자입니다.</p>
+      <blockquote>Unity와 로블록스로 팀 프로젝트를 하며 패링 전투, 대화·미니게임, 좀비 NPC, GPT 채점 서버를 구현했습니다.</blockquote>
+      <blockquote>개발한 게임의 효과음과 BGM을 직접 작업했고, 게임사운드디자인전문가과정을 수료했습니다.</blockquote>
+      <blockquote>학부연구생으로 ETRI 위탁과제 2건에 참여했고, 학과 제2대 학생회장을 맡았습니다.</blockquote>
+    </div>
+  </section>
+
+  <h2 class="n-h1" id="projects">🎮 Projects</h2>
+  <h3 class="n-h3">Main</h3>
+    <div class="n-gallery two">
+      <a class="n-card" href="projects/porta.html">
+        <div class="n-thumb"><img src="assets/img/parrypaws-poster.jpg" alt="" loading="lazy"></div>
+        <div class="n-card-body">
+          <div class="n-card-title">Parry Paws</div>
+          <div class="n-card-line muted">2025.12</div>
+          <div class="n-card-line"><span class="n-tag c-yellow">2D</span><span class="n-tag c-gray">액션</span></div>
+          <div class="n-card-line"><span class="n-tag c-blue-soft">Unity</span><span class="n-tag c-blue-soft">C#</span></div>
+          <div class="n-card-line small">2인 · 게임 시스템, 사운드 담당</div>
+          <div class="n-card-line small">패링으로 투사체를 되받아치는 캐주얼 2D 액션 게임</div>
+        </div>
+      </a>
+      <a class="n-card" href="projects/gitdesk.html">
+        <div class="n-thumb"><img src="assets/img/gitdesk-poster.jpg" alt="" loading="lazy"></div>
+        <div class="n-card-body">
+          <div class="n-card-title">GitDesk</div>
+          <div class="n-card-line muted">2025.06</div>
+          <div class="n-card-line"><span class="n-tag c-yellow">2D</span><span class="n-tag c-gray">시뮬레이션</span><span class="n-tag c-red">학회 동상</span></div>
+          <div class="n-card-line"><span class="n-tag c-blue-soft">Unity</span><span class="n-tag c-blue-soft">C#</span><span class="n-tag c-blue-soft">Flask</span><span class="n-tag c-blue-soft">GPT API</span></div>
+          <div class="n-card-line small">2인 · 서버·채점·GPT 연동 담당</div>
+          <div class="n-card-line small">회사 메신저로 받은 파이썬 문제를 푸는 코딩 학습 게임</div>
+        </div>
+      </a>
+    </div>
+
+  <h3 class="n-h3">Sub</h3>
+    <div class="n-gallery ">
+      <a class="n-card" href="projects/invite.html">
+        <div class="n-thumb"><img src="assets/img/invite-poster.jpg" alt="" loading="lazy"></div>
+        <div class="n-card-body">
+          <div class="n-card-title">Invite</div>
+          <div class="n-card-line muted">2024.07 – 2024.10</div>
+          <div class="n-card-line"><span class="n-tag c-yellow">2D</span><span class="n-tag c-brown">스팀펑크</span></div>
+          <div class="n-card-line"><span class="n-tag c-blue-soft">Unity</span><span class="n-tag c-blue-soft">C#</span></div>
+          <div class="n-card-line small">2인 · 메인 개발, 기획, 사운드 담당</div>
+          <div class="n-card-line small">NPC와 대화하며 미니게임 세 가지를 푸는 2D 게임</div>
+        </div>
+      </a>
+      <a class="n-card" href="projects/nursing.html">
+        <div class="n-thumb"><img src="assets/img/nursing-im-poster.jpg" alt="" loading="lazy"></div>
+        <div class="n-card-body">
+          <div class="n-card-title">가상병실 간호 실습 콘텐츠</div>
+          <div class="n-card-line muted">2024.05 – 2024.12</div>
+          <div class="n-card-line"><span class="n-tag c-yellow">2D</span><span class="n-tag c-green">교육</span></div>
+          <div class="n-card-line"><span class="n-tag c-blue-soft">Unity</span><span class="n-tag c-blue-soft">C#</span></div>
+          <div class="n-card-line small">2인 · 개발, 사운드 담당</div>
+          <div class="n-card-line small">근육주사 과정을 단계별로 연습하는 2D 실습 콘텐츠</div>
+        </div>
+      </a>
+      <a class="n-card" href="projects/room404.html">
+        <div class="n-thumb"><img src="assets/img/room404-poster.jpg" alt="" loading="lazy"></div>
+        <div class="n-card-body">
+          <div class="n-card-title">room: 404</div>
+          <div class="n-card-line muted">2023.10 – 2023.12</div>
+          <div class="n-card-line"><span class="n-tag c-pink">3D</span><span class="n-tag c-gray">FPS</span></div>
+          <div class="n-card-line"><span class="n-tag c-blue-soft">Roblox</span><span class="n-tag c-blue-soft">Luau</span><span class="n-tag c-blue-soft">Cubase</span></div>
+          <div class="n-card-line small">3인 · 서브 개발, 사운드 담당</div>
+          <div class="n-card-line small">로블록스로 만든 1인칭 좀비 FPS</div>
+        </div>
+      </a>
+      <a class="n-card" href="projects/fps.html">
+        <div class="n-thumb"><span class="thumb-empty" aria-hidden="true"></span></div>
+        <div class="n-card-body">
+          <div class="n-card-title">What-A-Scrub</div>
+          <div class="n-card-line muted">2024.12</div>
+          <div class="n-card-line"><span class="n-tag c-pink">3D</span><span class="n-tag c-gray">멀티플레이 FPS</span></div>
+          <div class="n-card-line"><span class="n-tag c-blue-soft">Unity</span><span class="n-tag c-blue-soft">C#</span><span class="n-tag c-blue-soft">Alteruna</span></div>
+          <div class="n-card-line small">게임콘텐츠제작 과제</div>
+          <div class="n-card-line small">멀티플레이 FPS 템플릿 위에 로그인·사격 연습장·채팅을 만든 과제</div>
+        </div>
+      </a>
+      <a class="n-card" href="projects/vrquiz.html">
+        <div class="n-thumb"><span class="thumb-empty" aria-hidden="true"></span></div>
+        <div class="n-card-body">
+          <div class="n-card-title">두뇌의 벽 VR</div>
+          <div class="n-card-line muted">2024.12</div>
+          <div class="n-card-line"><span class="n-tag c-purple">VR</span><span class="n-tag c-gray">퀴즈</span></div>
+          
+          <div class="n-card-line small">4인 · 정답 인식, 점수판 담당</div>
+          <div class="n-card-line small">문제의 정답 위치에 맞는 포즈를 취해 통과하는 VR 퀴즈</div>
+        </div>
+      </a>
+      <a class="n-card" href="projects/ragdoll.html">
+        <div class="n-thumb"><span class="thumb-empty" aria-hidden="true"></span></div>
+        <div class="n-card-body">
+          <div class="n-card-title">래그돌 클라이밍</div>
+          <div class="n-card-line muted">2024.06</div>
+          <div class="n-card-line"><span class="n-tag c-gray">기말 대체 과제</span></div>
+          
+          <div class="n-card-line small">3인 팀 프로젝트</div>
+          <div class="n-card-line small">래그돌 컨트롤러로 기믹 다섯 가지를 넘어가는 게임</div>
+        </div>
+      </a>
+      <a class="n-card" href="projects/pygame.html">
+        <div class="n-thumb"><img src="assets/img/python-runaway-poster.jpg" alt="" loading="lazy"></div>
+        <div class="n-card-body">
+          <div class="n-card-title">run away baby!</div>
+          <div class="n-card-line muted">2023.05</div>
+          <div class="n-card-line"><span class="n-tag c-yellow">2D</span><span class="n-tag c-gray">경진대회</span></div>
+          <div class="n-card-line"><span class="n-tag c-blue-soft">Python</span><span class="n-tag c-blue-soft">turtle</span></div>
+          <div class="n-card-line small">파이썬 경진대회 출품작</div>
+          <div class="n-card-line small">두 가지 점프로 장애물을 피하는 횡스크롤 게임</div>
+        </div>
+      </a>
+    </div>
+
+  <h2 class="n-h1" id="sound">🎧 Sound</h2>
+  <p class="n-text muted">게임 영상의 소리를 지우고 새로 입힌 작업입니다.</p>
+    <div class="n-gallery two">
+      <a class="n-card" href="projects/zzz.html">
+        <div class="n-thumb"><img src="assets/img/zzz-poster.jpg" alt="" loading="lazy"></div>
+        <div class="n-card-body">
+          <div class="n-card-title">젠레스 존 제로 ‘엘렌’ 전투 사운드</div>
+          <div class="n-card-line muted">2026.09</div>
+          <div class="n-card-line"><span class="n-tag c-orange">사운드 리디자인</span></div>
+          <div class="n-card-line"><span class="n-tag c-blue-soft">REAPER</span></div>
+          <div class="n-card-line small">혼자 작업 · 게임사운드디자인전문가과정</div>
+          <div class="n-card-line small">약 25초 컷신·전투 영상의 효과음을 새로 입힌 작업</div>
+        </div>
+      </a>
+      <a class="n-card" href="projects/lostark.html">
+        <div class="n-thumb"><img src="assets/img/lostark-poster.jpg" alt="" loading="lazy"></div>
+        <div class="n-card-body">
+          <div class="n-card-title">로스트아크 버서커 소개 영상 사운드</div>
+          <div class="n-card-line muted">2025.12</div>
+          <div class="n-card-line"><span class="n-tag c-orange">사운드 리디자인</span></div>
+          <div class="n-card-line"><span class="n-tag c-blue-soft">Ableton Live 12</span></div>
+          <div class="n-card-line small">혼자 작업 · 수업 과제</div>
+          <div class="n-card-line small">바닥이 용암처럼 달아오르는 장면의 불 질감에 집중한 작업</div>
+        </div>
+      </a>
+    </div>
+
+  <h2 class="n-h1" id="other">🧩 게임 외 개발</h2>
+    <div class="n-gallery ">
+      <a class="n-card" href="projects/llmwfc.html">
+        <div class="n-thumb"><img src="assets/img/wfc-demo.jpg" alt="" loading="lazy"></div>
+        <div class="n-card-body">
+          <div class="n-card-title">LLM–WFC 장애물 배치</div>
+          <div class="n-card-line muted">2026.10</div>
+          <div class="n-card-line"><span class="n-tag c-blue">연구</span><span class="n-tag c-red">학술제 본선</span></div>
+          <div class="n-card-line"><span class="n-tag c-blue-soft">Unity 6</span><span class="n-tag c-blue-soft">C#</span><span class="n-tag c-blue-soft">Ollama</span></div>
+          <div class="n-card-line small">1인 연구·개발</div>
+          <div class="n-card-line small">말로 지시하면 규칙을 지키는 장애물 배치 초안을 만드는 도구</div>
+        </div>
+      </a>
+      <a class="n-card" href="projects/sleep.html">
+        <div class="n-thumb"><img src="assets/img/sleep-detect-poster.jpg" alt="" loading="lazy"></div>
+        <div class="n-card-body">
+          <div class="n-card-title">안면 인식 졸음 방지</div>
+          <div class="n-card-line muted">2023.10 – 2023.12</div>
+          <div class="n-card-line"><span class="n-tag c-blue">컴퓨터 비전</span><span class="n-tag c-gray">학술제 발표</span></div>
+          <div class="n-card-line"><span class="n-tag c-blue-soft">Python</span><span class="n-tag c-blue-soft">OpenCV</span><span class="n-tag c-blue-soft">MediaPipe</span></div>
+          <div class="n-card-line small">학술제 발표작</div>
+          <div class="n-card-line small">눈 감김이 이어지면 경고음과 카카오톡 알림을 보내는 프로그램</div>
+        </div>
+      </a>
+      <a class="n-card" href="projects/facecam.html">
+        <div class="n-thumb"><img src="assets/img/facecam-detect.jpg" alt="" loading="lazy"></div>
+        <div class="n-card-body">
+          <div class="n-card-title">얼굴 포커싱 직캠 모듈</div>
+          <div class="n-card-line muted">2025.05 – 2025.06</div>
+          <div class="n-card-line"><span class="n-tag c-blue">컴퓨터 비전</span><span class="n-tag c-gray">수업 과제</span></div>
+          <div class="n-card-line"><span class="n-tag c-blue-soft">Python</span><span class="n-tag c-blue-soft">OpenCV</span><span class="n-tag c-blue-soft">InsightFace</span></div>
+          <div class="n-card-line small">영상처리 강의 과제</div>
+          <div class="n-card-line small">고른 사람의 얼굴을 따라가며 확대한 영상을 저장하는 모듈</div>
+        </div>
+      </a>
+    </div>
+
+  <div class="n-split">
+    <section>
+      <h2 class="n-h1" id="award">🏆 Award</h2>
+      <p class="n-text muted">학회와 교내 대회에서 5회 수상했습니다.</p>
+      <table class="n-table">
+        <thead><tr><th>대회</th><th>수상</th><th>시기</th></tr></thead>
+        <tbody>
+<tr><td>SW 아이디어톤</td><td><span class="n-tag c-red">2위</span></td><td class="muted nowrap">2024.06</td></tr>
+<tr><td>캡스톤디자인경진대회 — 아동 미세 운동 검사<div class="td-note"><a href="https://github.com/rkdwlals/2024_18TH_CapstoneDesign" target="_blank" rel="noopener">GitHub</a> · 별 도형 채점 알고리즘, 엑셀 검사지, 카카오톡 결과 알림 담당</div></td><td><span class="n-tag c-red">동상</span></td><td class="muted nowrap">2024.11</td></tr>
+<tr><td>SW융합대학 학술제</td><td><span class="n-tag c-orange">우수상</span></td><td class="muted nowrap">2024.11</td></tr>
+<tr><td>SW융합대학 학술제</td><td><span class="n-tag c-orange">장려상</span></td><td class="muted nowrap">2024.11</td></tr>
+<tr><td>한국디지털콘텐츠학회 하계종합학술대회 — GitDesk<div class="td-note"><a href="projects/gitdesk.html">프로젝트 보기</a></div></td><td><span class="n-tag c-red">동상</span></td><td class="muted nowrap">2025.07</td></tr>
+        </tbody>
+      </table>
+    </section>
   </div>
-</header>
 
-<main id="top">
-  <section class="intro wrap" aria-labelledby="intro-title">
-    <h1 id="intro-title">
-      <span class="name">강지민</span>
-      <span class="role">게임을 만들고, 그 게임에 들어갈 소리를 만듭니다.</span>
-    </h1>
-    <p class="print-only print-url">온라인 버전(영상 재생 가능): https://rkdwlals.github.io &nbsp;·&nbsp; GitHub: github.com/rkdwlals</p>
-      <p class="lede">순천향대학교 메타버스&amp;게임학과 4학년(2027년 2월 졸업 예정)입니다. Unity와 로블록스로 게임 시스템을 직접 구현해 왔고, 그 게임에 들어가는 효과음과 BGM도 만들었습니다. 게임사운드디자인전문가과정을 수료했습니다.</p>
-  </section>
+  <h2 class="n-h1" id="activity">📝 Activity</h2>
+  <ul class="n-acts">
+<li><span class="act-date">2026.09</span><span class="act-name">게임사운드디자인전문가과정 수료 (충남글로벌게임센터)</span></li>
+<li><span class="act-date">2026.02</span><span class="act-name">한국통신학회(KICS) 동계학술대회 발표</span></li>
+<li><span class="act-date">2025.10 – 2026.08</span><span class="act-name">몰입형 비전 연구실(Immervis Lab) 학부연구생</span></li>
+<li><span class="act-date">2025.07</span><span class="act-name">한국디지털콘텐츠학회 하계종합학술대회 발표</span></li>
+<li><span class="act-date">2025.04 – 2025.10</span><span class="act-name">순천향대 SW융합대학 제4기 SW프런티어</span></li>
+<li><span class="act-date">2025.02 – 2026.03</span><span class="act-name">메타버스&amp;게임학과 제2대 학생회장<span class="act-note">투표율 학과대항전 96.58%로 전체 학과 1위, MT 참여율 84%, 임기 만족도 평균 4.6점(50명 응답)</span></span></li>
+<li><span class="act-date">2024.06 – 2024.11</span><span class="act-name">ETRI 위탁과제: 건물 벽면 시멘틱 분류 및 3D 공간객체 간략화 SW 모듈</span></li>
+<li><span class="act-date">2024.06</span><span class="act-name">대한전자공학회 하계종합학술대회 발표</span></li>
+<li><span class="act-date">2023.07 – 2023.09</span><span class="act-name">LG U+ 메타버스 서포터즈 테스터·QA<span class="act-note">메타버스 캠퍼스에서 벤치 끼임, 강사 화면 공유 미표시 등을 찾아 보고해 우수 학생으로 선정. 보고회에서 제안한 칭호 시스템과 스터디윗미 시스템이 채택됨</span></span></li>
+<li><span class="act-date">2023.05 – 2025.07</span><span class="act-name">메타버스공간정보연구실 학부연구생</span></li>
+<li><span class="act-date">2023.05 – 2023.11</span><span class="act-name">ETRI 위탁과제: 이동체 기하학 정보 분석 모듈</span></li>
+  </ul>
 
-  <section class="tracks wrap" aria-labelledby="tracks-title">
-    <div class="tracks-head">
-      <h2 id="tracks-title">작업 타임라인</h2>
-      <p class="tracks-note">2023년부터 지금까지의 작업을 트랙별로 놓았습니다. 클립을 누르면 해당 작업으로 이동합니다.</p>
-    </div>
-    <div class="track-scroll" tabindex="0" aria-label="작업 타임라인, 가로로 스크롤할 수 있습니다">
-      <div class="track-view" id="trackView"></div>
-    </div>
-  </section>
+  <h2 class="n-h1" id="skills">🛠 Skills</h2>
+  <div class="n-skills">
+<div class="skill"><div class="skill-name">Unity · C#</div><div class="skill-desc">Parry Paws, Invite, GitDesk, 간호 실습 콘텐츠에서 전투·대화·미니게임·채점 시스템을 구현했습니다.</div></div>
+<div class="skill"><div class="skill-name">Roblox Studio · Luau</div><div class="skill-desc">room: 404에서 총기 시스템, 좀비 NPC, 킬 수에 따른 사운드 스크립트를 만들었습니다.</div></div>
+<div class="skill"><div class="skill-name">Python</div><div class="skill-desc">GitDesk의 Flask 채점 서버, OpenCV·MediaPipe·InsightFace를 쓴 영상 처리 과제를 작성했습니다.</div></div>
+<div class="skill"><div class="skill-name">REAPER · Ableton Live · Cubase</div><div class="skill-desc">게임 영상 사운드 리디자인 2편을 작업했고, room: 404 BGM 3곡을 Cubase로 작곡했습니다.</div></div>
+<div class="skill"><div class="skill-name">Unity AudioMixer</div><div class="skill-desc">Invite에서 BGM과 효과음을 믹서로 묶어 관리했습니다.</div></div>
+<div class="skill"><div class="skill-name">Wwise</div><div class="skill-desc">Wwise-301 과정을 학습했습니다. 실제 프로젝트에 적용한 경험은 아직 없습니다.</div></div>
+<div class="skill"><div class="skill-name">Unreal Engine · C++</div><div class="skill-desc">Unreal Engine으로 게임을 만든 경험이 있습니다.</div></div>
+  </div>
 
-  <section id="projects" class="section wrap" aria-labelledby="projects-title">
-    <h2 id="projects-title" class="section-title">게임 개발</h2>
-    <p class="section-lede">직접 개발한 게임입니다. 작품마다 <span class="tag tag-dev">개발</span>에서 구현한 것과 <span class="tag tag-sound">사운드</span> 작업을 나눠 적었고, 팀 프로젝트는 팀원이 맡은 부분도 함께 밝혔습니다.</p>
-
-    <article class="project" id="porta">
-      <div class="media">
-        <img class="print-only print-poster" src="assets/img/parrypaws-poster.jpg" alt="">
-        <video controls preload="metadata" playsinline poster="assets/img/parrypaws-poster.jpg">
-          <source src="assets/video/parrypaws-play.mp4" type="video/mp4">
-        </video>
-        <p class="print-only">▶ 영상: rkdwlals.github.io/#porta</p>
-      </div>
-      <div class="body">
-        <h3>Parry Paws</h3>
-        <dl class="meta">
-          <div><dt>장르</dt><dd>패링 중심의 캐주얼 2D 액션</dd></div>
-          <div><dt>시기</dt><dd>2025년 12월</dd></div>
-          <div><dt>형태</dt><dd>2인 개발, 게임 시스템과 사운드 담당</dd></div>
-          <div><dt>도구</dt><dd>Unity, C#</dd></div>
-        </dl>
-        <p class="repo-link"><a href="https://github.com/rkdwlals/ParryPaws" target="_blank" rel="noopener">GitHub에서 코드 보기</a> <a href="https://github.com/rkdwlals/ParryPaws/releases/tag/v1.0" target="_blank" rel="noopener">실행 파일 받기 (Windows)</a></p>
-        <p>플레이 피드백에서 &ldquo;모바일로 만들어 출시해도 좋겠다&rdquo;는 평을 받았습니다.</p>
-        <div class="part part-dev">
-          <h4 class="part-title"><span class="tag tag-dev">개발</span></h4>
-          <ul class="did">
-            <li>Q를 누르면 0.2초 동안만 패링 판정이 열리는 방식으로 패링을 만들었습니다.</li>
-            <li>패링 중에 까마귀의 화살이 닿으면 쏜 까마귀에게 되돌려 보내고, 닌자의 표창은 반대 방향으로 튕겨 냅니다. 튕겨 낸 표창에 맞은 닌자는 데미지와 함께 경직됩니다.</li>
-            <li>성공 판정은 투사체 쪽에서 내리고 플레이어의 <code>OnParrySuccess()</code>를 호출하게 나눠, 패링에 성공했을 때만 이펙트와 소리가 나게 했습니다.</li>
-            <li>캐릭터 구동과 애니메이션, HP 4칸과 HP바 연동, 사망 후 부활을 구현했습니다.</li>
-            <li>찌르기·파워 공격은 공격 지점 주변 범위 안의 적에게 데미지를 줍니다.</li>
-          </ul>
-<pre class="code"><code>// PlayerController2D
-// Q: 0.2초 동안만 패링 판정
-void StartParryWindow()
-{
-    isParrying = true;
-    parryEndTime = Time.time + parryDuration;
-}
-
-// ArrowProjectile: 플레이어에 닿았을 때
-if (player.IsParrying)
-{
-    // 성공할 때만 이펙트·사운드
-    player.OnParrySuccess();
-    // 쏜 까마귀에게 되돌려 보냄
-    ReflectBackToOwner();
-}
-else
-{
-    player.HitByProjectile(damageToPlayer);
-}</code></pre>
-          <p class="team-note">팀원 담당: UI, 시작 화면, 스테이지 화면, 맵</p>
-        </div>
-        <div class="part part-sound">
-          <h4 class="part-title"><span class="tag tag-sound">사운드</span></h4>
-          <p>유료 사운드 에셋을 살 수 없는 상황이어서, 적은 소리로 많은 동작을 채우는 구조부터 만들었습니다.</p>
-          <ul class="did">
-            <li>플레이어 사운드를 관리하는 PlayerSoundManager 스크립트를 직접 작성했습니다.</li>
-            <li>걷기, 구르기, 점프, 공격 4종, 찌르기, 패링, 피격, 사망 등 동작 15가지의 소리 칸을 나눴습니다.</li>
-            <li>걷기 소리는 별도 AudioSource로 분리해 움직이는 동안에만 반복 재생되게 했습니다.</li>
-            <li>게임의 핵심 동작인 패링 소리를 시작 화면 연출에도 넣었습니다.</li>
-          </ul>
-<pre class="code"><code>// 걷기 전용 소스: 움직이는 동안만 루프
-walkSource = gameObject.AddComponent&lt;AudioSource&gt;();
-walkSource.playOnAwake = false;
-walkSource.loop = true;
-walkSource.spatialBlend = 0;  // 2D
-
-public void PlayParry() =&gt; PlayClip(parryClip, 1f);</code></pre>
-          <p class="credit">소리 출처: 효과음은 직접 만든 것과 라이브러리 소스를 함께 사용, BGM은 Suno AI로 생성, 레벨 선택 화면 BGM은 에셋 팩 &lsquo;2D Dimensions&rsquo;에 포함된 음원.</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="project" id="gitdesk">
-      <div class="media">
-        <img class="print-only print-poster" src="assets/img/gitdesk-poster.jpg" alt="">
-        <video controls preload="metadata" playsinline poster="assets/img/gitdesk-poster.jpg">
-          <source src="assets/video/gitdesk-play.mp4" type="video/mp4">
-        </video>
-        <p class="print-only">▶ 영상: rkdwlals.github.io/#gitdesk</p>
-      </div>
-      <div class="body">
-        <h3>GitDesk</h3>
-        <dl class="meta">
-          <div><dt>장르</dt><dd>코딩 학습 시뮬레이션</dd></div>
-          <div><dt>시기</dt><dd>2025년 6월</dd></div>
-          <div><dt>형태</dt><dd>&lsquo;메타버스게임개발실습&rsquo; 2인 팀 프로젝트, 서버&middot;채점&middot;GPT 연동 등 개발 담당</dd></div>
-          <div><dt>도구</dt><dd>Unity, C#, Python(Flask), OpenAI GPT API</dd></div>
-        </dl>
-        <p class="repo-link"><a href="https://github.com/rkdwlals/GitDesk" target="_blank" rel="noopener">GitHub에서 코드 보기</a></p>
-        <p>개발자 인턴이 되어 회사 메신저로 받은 파이썬 문제를 푸는 게임입니다. 정답이면 재화를, 오답이면 경고를 받고, 재화로 배경과 키보드를 꾸밀 수 있습니다. 한국디지털콘텐츠학회 2025 하계종합학술대회에서 포스터로 발표해 <strong>동상</strong>을 받았습니다.</p>
-        <div class="part part-dev">
-          <h4 class="part-title"><span class="tag tag-dev">개발</span></h4>
-          <ul class="did">
-            <li>Unity에서 플레이어가 작성한 코드를 서버로 보내 실행하고 채점하는 정답 시스템을 만들었습니다.</li>
-            <li>코드 실행과 채점을 맡는 Flask 서버를 작성했습니다.</li>
-            <li>GPT를 연결해, 채점 결과에 대한 피드백이 상사의 메신저 메시지로 오게 했습니다.</li>
-          </ul>
-          <p class="team-note">팀원 담당: 메신저 화면, 컴퓨터 화면 전환 그림, 상점</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="project" id="invite">
-      <div class="media">
-        <img class="print-only print-poster" src="assets/img/invite-poster.jpg" alt="">
-        <video controls preload="metadata" playsinline poster="assets/img/invite-poster.jpg">
-          <source src="assets/video/invite-play.mp4" type="video/mp4">
-        </video>
-        <p class="print-only">▶ 영상: rkdwlals.github.io/#invite</p>
-      </div>
-      <div class="body">
-        <h3>Invite</h3>
-        <dl class="meta">
-          <div><dt>장르</dt><dd>스팀펑크 2D 게임</dd></div>
-          <div><dt>시기</dt><dd>2024년 7월~10월</dd></div>
-          <div><dt>형태</dt><dd>2인 개발, 메인 개발자이자 사운드 디자이너(기획 포함)</dd></div>
-          <div><dt>도구</dt><dd>Unity, C#, AudioMixer</dd></div>
-        </dl>
-        <p class="repo-link"><a href="https://github.com/rkdwlals/Invite" target="_blank" rel="noopener">GitHub에서 코드 보기</a></p>
-        <p>NPC와 대화하며 미니게임 세 가지를 풀어 나가는 게임입니다. 기획을 맡았고, 시작 화면과 카드 게임 UI를 뺀 개발을 했습니다.</p>
-        <div class="part part-dev">
-          <h4 class="part-title"><span class="tag tag-dev">개발</span></h4>
-          <ul class="did">
-            <li>NPC를 클릭하면 대사가 한 글자씩 나오는 대화 시스템을 만들고, 대화가 끝나면 NPC에 따라 해당 미니게임으로 넘어가게 했습니다.</li>
-            <li>카드 게임: 카드를 끌어다 카트에 넣되, 정해진 순서대로 넣어야 통과하고 가짜 카드를 넣으면 경고가 뜨게 했습니다.</li>
-            <li>퍼즐 게임: 그림 조각을 누를 때마다 90도씩 돌아가고, 모두 바로 세우면 단서가 나타나게 했습니다.</li>
-            <li>검 게임: 여러 자루 중 진짜 검을 클릭해 찾게 했습니다.</li>
-            <li>캐릭터 이동과 이동 상태에 따른 애니메이션 전환을 구현했습니다.</li>
-            <li>발판을 밟으면 다른 방으로 순간이동하는 텔레포트와 플레이어를 따라가는 카메라를 만들었습니다.</li>
-          </ul>
-          <p class="team-note">팀원 담당: 시작 화면, 카드 게임 UI</p>
-        </div>
-        <div class="part part-sound">
-          <h4 class="part-title"><span class="tag tag-sound">사운드</span></h4>
-          <p>게임 진행도에 맞춰 장면마다 BGM을 따로 정했습니다. 스팀펑크 분위기에 맞춰 어두운 재즈를 기본으로 두고, 초반은 느린 템포와 낮은 현악기로 스산하게, 마지막 수수께끼는 빠른 템포와 높은 관악기로 긴장감 있게 만들었습니다.</p>
-          <ul class="did">
-            <li>장면 6개에 BGM을 한 곡씩 배치했습니다.</li>
-            <li>AudioMixer를 만들어 BGM과 효과음을 모두 믹서를 거쳐 나가게 했습니다.</li>
-          </ul>
-          <p class="credit">소리 출처: BGM 6곡은 Suno AI로 생성, 종이 넘기는 효과음은 외부 소스.</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="project" id="nursing">
-      <div class="media">
-        <img class="print-only print-poster" src="assets/img/nursing-im-poster.jpg" alt="">
-        <video controls preload="metadata" playsinline poster="assets/img/nursing-im-poster.jpg">
-          <source src="assets/video/nursing-im-play.mp4" type="video/mp4">
-        </video>
-        <p class="print-only">▶ 영상: rkdwlals.github.io/#nursing</p>
-        <p class="media-note">근육주사 실습 플레이 영상입니다.</p>
-      </div>
-      <div class="body">
-        <h3>VR&middot;MR 기반 핵심 간호술 실습을 위한 가상병실 콘텐츠</h3>
-        <dl class="meta">
-          <div><dt>시기</dt><dd>2024년 5월~12월</dd></div>
-          <div><dt>형태</dt><dd>2024 콘텐츠원캠퍼스 구축운영 사업, 2인(개발·사운드 담당)</dd></div>
-          <div><dt>도구</dt><dd>Unity 2D, C#</dd></div>
-        </dl>
-        <p class="repo-link"><a href="https://github.com/rkdwlals/Nursing" target="_blank" rel="noopener">GitHub에서 코드 보기</a></p>
-        <p>근육주사 과정을 손 씻기부터 물품 준비, 약물 주입까지 차례로 연습하는 2D 실습 콘텐츠입니다. 화면 전환 그림 2장과 오브젝트 도트 그림을 뺀 개발과 사운드를 맡았습니다.</p>
-        <p>팀 전체 결과물은 콘텐츠원캠퍼스운영사무국이 공개한 소개 영상에서 볼 수 있습니다. <a href="https://youtu.be/QfA6NbieFxQ" target="_blank" rel="noopener">YouTube에서 보기</a></p>
-        <div class="part part-dev">
-          <h4 class="part-title"><span class="tag tag-dev">개발</span></h4>
-          <ul class="did">
-            <li>손 씻기: 마우스 왼쪽과 오른쪽 버튼을 번갈아 정해진 횟수만큼 눌러 손을 씻는 단계를 만들었습니다.</li>
-            <li>물품 준비: R키로 투약카드를 확인하고 필요한 물품을 카트로 옮기는 단계를 만들고, 필요 없는 함정 물품과 초기화(Reset) 버튼을 넣었습니다.</li>
-            <li>약물 주입: 앰플을 따고 주사기를 끌어다 약물을 주입하는 단계를 만들었습니다.</li>
-            <li>대표 피드백과 멘토링 요청을 반영해 시작 화면, 손 씻기 횟수, 대화창, 카트 함정 물품을 고쳤습니다.</li>
-            <li>디자인 파트에 필요한 그림을 문서로 정리해 요청하고, 받은 손 일러스트와 로딩 화면을 적용했습니다.</li>
-          </ul>
-          <p class="team-note">팀원 담당: 화면 전환 그림 2장, 오브젝트 도트 그림</p>
-        </div>
-        <div class="part part-sound">
-          <h4 class="part-title"><span class="tag tag-sound">사운드</span></h4>
-          <p>간호 술기를 연습하는 콘텐츠라서, 학습자가 한 행동이 맞았는지를 소리로 바로 알려주는 데 집중했습니다.</p>
-          <ul class="did">
-            <li>손 씻기 장면에 물소리, 병실 장면에 낮은 음량의 에어컨 환경음, 과정을 마치면 완료 효과음을 넣었습니다.</li>
-            <li>앰플을 끌어다 부딪히면 소리가 나게 하고, 로딩 화면과 대화 넘김에도 효과음을 붙였습니다.</li>
-            <li>VR 로비에 쓸 배경음악을 요청받아, 보사노바 리듬을 직접 찍고 Suno AI로 곡을 완성해 제출했습니다.</li>
-          </ul>
-          <p class="credit">소리 출처: 효과음은 외부 소스를 골라 배치, 로비 BGM은 직접 만든 리듬을 바탕으로 Suno AI로 생성.</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="project" id="room404">
-      <div class="media">
-        <img class="print-only print-poster" src="assets/img/room404-poster.jpg" alt="">
-        <video controls preload="metadata" playsinline poster="assets/img/room404-poster.jpg">
-          <source src="assets/video/room404-play.mp4" type="video/mp4">
-        </video>
-        <p class="print-only">▶ 영상: rkdwlals.github.io/#room404</p>
-      </div>
-      <div class="body">
-        <h3>room: 404</h3>
-        <dl class="meta">
-          <div><dt>장르</dt><dd>1인칭 좀비 FPS</dd></div>
-          <div><dt>시기</dt><dd>2023년 10월~12월</dd></div>
-          <div><dt>형태</dt><dd>3인 개발, 서브 개발자이자 사운드 디자이너</dd></div>
-          <div><dt>도구</dt><dd>Roblox Studio, Luau, Cubase</dd></div>
-        </dl>
-        <p class="repo-link"><a href="https://github.com/rkdwlals/Room-404" target="_blank" rel="noopener">GitHub에서 코드 보기</a></p>
-        <div class="part part-dev">
-          <h4 class="part-title"><span class="tag tag-dev">개발</span></h4>
-          <ul class="did">
-            <li>총기 시스템을 구현했습니다.</li>
-            <li>좀비 NPC 시스템을 만들었습니다.</li>
-            <li>맵 일부를 디자인했습니다. 벽에 걸린 그림, 가운데 시체, 힐팩 배치 등이 제 작업입니다.</li>
-          </ul>
-        </div>
-        <div class="part part-sound">
-          <h4 class="part-title"><span class="tag tag-sound">사운드</span></h4>
-          <p>처치할 때마다 다른 소리가 나도록 킬 사운드를 단계별로 나눴고, 회복음과 재장전음, BGM은 직접 만들었습니다.</p>
-          <ul class="did">
-            <li>킬 수를 세서 1킬부터 5킬 이상까지 다섯 단계로 다른 킬 사운드가 나오는 스크립트를 작성했습니다.</li>
-            <li>구급상자 회복음과 재장전음을 직접 만들어 넣었습니다.</li>
-            <li>Cubase로 BGM 3곡을 작곡하고, 곡을 차례로 트는 재생 목록 스크립트를 만들었습니다.</li>
-          </ul>
-          <p class="credit">소리 출처: 회복음, 재장전음, BGM 3곡은 직접 제작. 킬 사운드와 총소리 등은 외부 소스를 사용했고, BGM 중 1곡은 기존 곡입니다.</p>
-        </div>
-      </div>
-    </article>
-  </section>
-
-  <section id="sound" class="section wrap" aria-labelledby="sound-title">
-    <h2 id="sound-title" class="section-title">사운드 리디자인</h2>
-    <p class="section-lede">게임 영상의 소리를 지우고 새로 입힌 작업입니다. 각 작업 아래에 소리의 출처를 적어 두었습니다.</p>
-
-    <article class="project" id="zzz">
-      <div class="media">
-        <img class="print-only print-poster" src="assets/img/zzz-poster.jpg" alt="">
-        <video controls preload="metadata" playsinline poster="assets/img/zzz-poster.jpg">
-          <source src="assets/video/zzz-ellen-sfx.mp4" type="video/mp4">
-        </video>
-        <p class="print-only">▶ 영상: rkdwlals.github.io/#zzz</p>
-      </div>
-      <div class="body">
-        <h3>젠레스 존 제로 &lsquo;엘렌&rsquo; 전투 사운드 리디자인</h3>
-        <dl class="meta">
-          <div><dt>시기</dt><dd>2026년 9월</dd></div>
-          <div><dt>형태</dt><dd>게임사운드디자인전문가과정 결과물, 혼자 작업</dd></div>
-          <div><dt>도구</dt><dd>REAPER</dd></div>
-        </dl>
-        <p>약 25초 분량의 컷신과 전투 영상에 소리를 새로 입혔습니다. 가장 신경 쓴 건 동작과 소리의 싱크, 그리고 무기가 바닥에 긁히는 소리 같은 작은 접촉음의 질감입니다.</p>
-        <ul class="did">
-          <li>트랙 37개, 효과음 클립 82개로 구성했습니다.</li>
-          <li>휘두르는 소리와 타격음을 다른 트랙에 나눠 쌓고, 피니시 구간에는 트랙 10개를 겹쳤습니다.</li>
-          <li>같은 소스를 2.7배 빠르게, 또는 0.6배 느리게 바꾸고 리버브와 딜레이를 걸어 무게를 다르게 만들었습니다.</li>
-          <li>휘두름 소리를 뒤집어 카메라 회전음으로 쓰고, 카메라와 발소리에 팬 자동화를 넣었습니다.</li>
-          <li>걷는 구간에서는 BGM을 낮춰 발소리와 옷 스치는 소리가 들리게 했습니다.</li>
-        </ul>
-        <p class="credit">소리 출처: 효과음은 무료 라이브러리 소스를 가공, BGM은 Suno AI로 생성, 대사는 원본 영상에서 분리. 영상 원본의 저작권은 HoYoverse에 있습니다.</p>
-      </div>
-    </article>
-
-    <article class="project" id="lostark">
-      <div class="media">
-        <img class="print-only print-poster" src="assets/img/lostark-poster.jpg" alt="">
-        <video controls preload="metadata" playsinline poster="assets/img/lostark-poster.jpg">
-          <source src="assets/video/lostark-berserker-sfx.mp4" type="video/mp4">
-        </video>
-        <p class="print-only">▶ 영상: rkdwlals.github.io/#lostark</p>
-      </div>
-      <div class="body">
-        <h3>로스트아크 버서커 클래스 소개 영상 사운드 리디자인</h3>
-        <dl class="meta">
-          <div><dt>시기</dt><dd>2025년 12월</dd></div>
-          <div><dt>형태</dt><dd>&lsquo;메타버스&amp;게임영상사운드개발실습&rsquo; 과제, 혼자 작업</dd></div>
-          <div><dt>도구</dt><dd>Ableton Live 12</dd></div>
-        </dl>
-        <p>칼을 바닥에 꽂자 바닥이 용암처럼 달아올랐다가 터지는 장면이 있습니다. 그 장면의 불타는 질감을 표현하는 데 가장 공을 들였습니다.</p>
-        <ul class="did">
-          <li>트랙 35개를 배경음, 휘두름, 타격, 이펙트, 칼 소리 5개 그룹으로 나눠 작업했습니다.</li>
-          <li>바람 소리 두 가지로 배경을 깔고 그 위에 전투음을 올렸습니다.</li>
-          <li>불타는 소리 루프, 화염구 폭발음, 불 휘두름 소리를 겹치고, 마지막 휘두름은 피치를 15반음 내렸습니다.</li>
-          <li>연타 구간에서는 타격음과 베기 소리를 열 번씩 같은 타이밍에 겹쳤습니다.</li>
-          <li>금속 문, 나무 문, 쓰레기통 뚜껑 닫히는 소리를 무기 타격음으로 바꿔 썼습니다.</li>
-        </ul>
-        <p class="credit">소리 출처: 효과음 라이브러리(WAV) 소스를 가공. 영상 원본의 저작권은 Smilegate RPG에 있습니다.</p>
-      </div>
-    </article>
-  </section>
-
-  <section id="games" class="section wrap" aria-labelledby="games-title">
-    <h2 id="games-title" class="section-title">그 밖의 게임 개발</h2>
-    <ul class="list">
-      <li id="ragdoll">
-        <h3>게임엔진 기말 대체 과제: 래그돌 클라이밍 게임</h3>
-        <p>2024년 6월, 3인 팀 프로젝트. 래그돌 컨트롤러로 프로펠러, 구름, 돌 같은 기믹 다섯 가지를 넘어가는 게임입니다.</p>
-      </li>
-      <li id="fps">
-        <h3>게임콘텐츠제작: 멀티플레이 FPS &lsquo;What-A-Scrub&rsquo;</h3>
-        <p>2024년 12월. Alteruna 멀티플레이 FPS 템플릿을 바탕으로 로그인 화면, 메뉴, 사격 연습장, 크로스헤어, 채팅을 만들었습니다. 방 매칭, 총을 든 캐릭터, 점수판은 템플릿 기능이고 맵은 외부 에셋입니다. <a href="https://github.com/rkdwlals/What-A-Scrub">GitHub</a></p>
-      </li>
-      <li id="vrquiz">
-        <h3>VR 퀴즈: 두뇌의 벽 VR</h3>
-        <p>2024년 12월, 4인 팀 프로젝트(개발 기간 1주). SBS 예능 &lsquo;작렬정신통일&rsquo;의 &lsquo;두뇌의 벽&rsquo;을 모티브로 한 VR 퀴즈입니다. 문제와 선택지 3개가 나오면 정답 위치의 구멍에 맞는 포즈를 VR 핸드로 취해야 통과합니다. 저는 문제와 정답을 연결해 정답을 인식하는 부분, VR 손의 스피어와 문제지의 스피어를 연결해 정답을 처리하는 부분, 점수판을 개발했습니다. <a href="https://github.com/yeuljliyn/QuizData">GitHub</a></p>
-      </li>
-      <li id="pygame">
-        <h3>파이썬 경진대회: 횡스크롤 게임 &lsquo;run away baby!&rsquo;</h3>
-        <p>2023년 5월, 1학년 1학기 파이썬 경진대회 출품작. Python turtle 모듈로 만든 장애물 피하기 게임입니다. 스페이스바(높은 점프)와 위쪽 화살표(낮은 점프) 두 가지 점프로 장애물을 피하고, 게임이 끝나면 버틴 시간을 보여 줍니다. <a href="https://github.com/rkdwlals/python_BeltScrollActionGame">GitHub</a></p>
-        <img class="print-only print-poster" src="assets/img/python-runaway-poster.jpg" alt="">
-        <video class="list-video" controls preload="metadata" playsinline muted poster="assets/img/python-runaway-poster.jpg">
-          <source src="assets/video/python-runaway-play.mp4" type="video/mp4">
-        </video>
-        <p class="print-only">▶ 영상: rkdwlals.github.io/#pygame</p>
-      </li>
-    </ul>
-  </section>
-
-  <section id="vision" class="section wrap" aria-labelledby="vision-title">
-    <h2 id="vision-title" class="section-title">게임 외 개발</h2>
-    <p class="section-lede">게임 제작을 돕는 도구 연구와, 웹캠·영상에서 얼굴을 인식해 동작하는 컴퓨터 비전 과제입니다.</p>
-    <article class="project" id="llmwfc">
-      <div class="media">
-        <img class="media-img" src="assets/img/wfc-demo.jpg" width="2000" height="840" loading="lazy" alt="Unity 데모 화면. 왼쪽 패널에 자연어 명령과 LLM이 뽑은 구역별 밀도·종류 가중치가 있고, 오른쪽에 명령 없이 WFC만 쓴 맵과 LLM 제약을 넣은 맵이 나란히 있다. 제안 기법 맵은 북서쪽과 남동쪽 연못 주변에 수풀이 몰려 있고 가운데가 비어 있다.">
-        <p class="media-note">Unity 데모. 명령 &ldquo;수풀 비중 높게 가고, 서북쪽이랑 동남쪽 연못 부근에 몰아 줘. 가운데랑 남서쪽은 널찍하게 비우고 나머지 장애물은 띄엄띄엄&rdquo;을 LLM이 북서·동·남동 &lsquo;높음&rsquo;, 수풀 ×3.0으로 바꿨습니다. 왼쪽은 명령 없이 WFC만 쓴 맵, 오른쪽은 같은 seed에 제약을 넣은 맵이며 상단에 경로 확보·인접 규칙 위반 0칸·지형 침범 0칸 검사 결과가 표시됩니다.</p>
-      </div>
-      <div class="body">
-        <h3>LLM 기반 WFC 제약 생성을 통한 프롬프트 기반 장애물 배치</h3>
-        <dl class="meta">
-          <div><dt>시기</dt><dd>2026년 10월, 학술제 본선 출품</dd></div>
-          <div><dt>형태</dt><dd>1인 연구·개발 (지도교수 지도)</dd></div>
-          <div><dt>도구</dt><dd>Unity 6, C#, Ollama, gemma4:e4b</dd></div>
-        </dl>
-        <p>&ldquo;서쪽은 빽빽하게, 동쪽은 비워 줘&rdquo;처럼 말로 지시하면, 강·연못을 침범하지 않고 출발점에서 도착점까지 길을 남기는 장애물 배치 초안을 만드는 도구입니다. LLM은 명령의 의도를 JSON 제약으로 바꾸고, 실제 배치는 규칙 기반 WFC(Wave Function Collapse)가 맡습니다.</p>
-        <div class="part part-dev">
-          <h4 class="part-title"><span class="tag tag-dev">개발</span></h4>
-          <ul class="did">
-            <li>LLM이 3×3 구역별 밀도(low/mid/high), 장애물 종류 비중, 경로 필수 여부를 JSON으로 출력하게 하고, 형식·값 범위를 검사해 어긋난 항목만 기본값으로 바꾸는 단계를 만들었습니다.</li>
-            <li>WFC 배치: 물·다리·시작점·목표점 칸 고정 → 경로 선확보 → 칸별 가중치 → 인접 규칙을 지키며 칸 확정·전파 → 실패 시 seed를 바꿔 최대 20회 재생성.</li>
-            <li>8GB GPU에서 도는 공개 모델 3종을 파일럿으로 비교해, 형식을 모두 지키고 가장 빠른 gemma4:e4b를 골랐습니다.</li>
-            <li>WFC 단독, LLM 직접 생성, 키워드 규칙 변환과 같은 목표 맵 20개로 비교했습니다. 구역 밀도 오차는 WFC 단독 대비 47%, 처음 보는 말투에서는 키워드 규칙 대비 37% 줄었고(Wilcoxon, Holm 보정 p&lt;0.01), 인접 규칙·지형 침범 위반은 0/2,400이었습니다.</li>
-          </ul>
-          <p class="team-note">한계: 목표 맵을 이 시스템의 WFC로, 실험 명령을 AI로 만들었기 때문에 사람이 만든 맵과 레벨 디자이너의 실제 명령으로 다시 검증해야 합니다.</p>
-        </div>
-      </div>
-    </article>
-
-    <ul class="list">
-      <li id="sleep">
-        <h3>안면 인식 졸음 방지 시스템</h3>
-        <p>2023년 10월~12월, 학술제 발표. MediaPipe Face Mesh로 눈 위·아래 랜드마크 사이 거리를 재서, 눈을 감은 상태가 이어지면 경고음을 울리고 카카오톡 &lsquo;나에게 보내기&rsquo;로 알림을 보냅니다. Python, OpenCV, MediaPipe. <a href="https://github.com/rkdwlals/Ai_SleepDetact">GitHub</a></p>
-              <img class="print-only print-poster" src="assets/img/sleep-detect-poster.jpg" alt="">
-        <video class="list-video list-wide" controls preload="metadata" playsinline poster="assets/img/sleep-detect-poster.jpg">
-          <source src="assets/video/sleep-detect-demo.mp4" type="video/mp4">
-        </video>
-        <p class="print-only">▶ 영상: rkdwlals.github.io/#sleep</p>
-        <p class="media-note">시연 영상. 웹캠 창에서 눈 랜드마크를 추적하다가 졸음으로 판단하면 경고음과 함께 카카오톡 메시지가 오고, 메시지의 버튼으로 잠 깨는 음악 영상을 엽니다.</p>
-      </li>
-      <li id="facecam">
-        <h3>얼굴 포커싱 직캠 모듈</h3>
-        <p>2025년 5월~6월, 영상처리 강의 과제. InsightFace(SCRFD)로 영상 속 얼굴을 검출해 번호를 붙이고, 고른 사람의 얼굴 주변을 잘라 확대한 직캠 영상을 저장합니다. 확대 정도는 트랙바로 조절합니다. Python, OpenCV, InsightFace. <a href="https://github.com/rkdwlals/Face_Focusing">GitHub</a></p>
-              <div class="list-media-row">
-          <figure><img src="assets/img/facecam-detect.jpg" width="1957" height="1073" loading="lazy" alt="무대 영상 한 프레임에서 다섯 사람의 얼굴에 초록 상자와 0~4 번호를 붙인 검출 화면"><figcaption>얼굴 검출과 번호 붙이기</figcaption></figure>
-          <figure><img src="assets/img/facecam-focus.jpg" width="678" height="512" loading="lazy" alt="3번 얼굴 주변만 잘라 검은 화면 가운데에 확대해 놓은 직캠 출력 화면"><figcaption>3번을 골랐을 때의 직캠 출력</figcaption></figure>
-        </div>
-        <p class="media-note">원본은 방송 무대 영상이며 저작권은 원저작자에게 있습니다. 과제 시연용으로만 사용했습니다.</p>
-      </li>
-    </ul>
-  </section>
-
-  <section id="research" class="section wrap" aria-labelledby="research-title">
-    <h2 id="research-title" class="section-title">연구·활동</h2>
-    <div class="cols">
-      <div>
-        <h3>연구</h3>
-        <ul class="facts">
-          <li><strong>메타버스공간정보연구실 학부연구생</strong><span>2023.05 – 2025.07</span></li>
-          <li>ETRI 위탁과제: 이동체 기하학 정보 분석 모듈<span>2023.05 – 2023.11</span></li>
-          <li>ETRI 위탁과제: 건물 벽면 시멘틱 분류 및 3D 공간객체 간략화 SW 모듈<span>2024.06 – 2024.11</span></li>
-          <li><strong>몰입형 비전 연구실(Immervis Lab) 학부연구생</strong><span>2025.10 – 2026.08</span></li>
-        </ul>
-        <h3>학회 발표</h3>
-        <ul class="facts">
-          <li>대한전자공학회 하계종합학술대회<span>2024.06</span></li>
-          <li>한국디지털콘텐츠학회 하계종합학술대회<span>2025.07</span></li>
-          <li>한국통신학회(KICS) 동계학술대회<span>2026.02</span></li>
-        </ul>
-      </div>
-      <div>
-        <h3>수상</h3>
-        <ul class="facts">
-          <li>SW 아이디어톤 2위<span>2024.06</span></li>
-          <li><div>캡스톤디자인경진대회 동상 (<a href="https://github.com/rkdwlals/2024_18TH_CapstoneDesign" target="_blank" rel="noopener">아동 미세 운동 검사</a>)</div><span>2024.11</span><em>OpenCV로 아동이 그린 별 도형을 채점하는 알고리즘, 엑셀 검사지 결과 출력, 카카오톡 결과 알림을 맡았습니다.</em></li>
-          <li>SW융합대학 학술제 우수상<span>2024.11</span></li>
-          <li>SW융합대학 학술제 장려상<span>2024.11</span></li>
-          <li>한국디지털콘텐츠학회 하계종합학술대회 동상 (GitDesk)<span>2025.07</span></li>
-        </ul>
-        <h3>활동</h3>
-        <ul class="facts">
-          <li id="lgu"><strong>LG U+ 메타버스 서포터즈 테스터·QA</strong><span>2023.07</span>
-            <em>메타버스 캠퍼스에서 벤치 끼임, 강사 화면 공유 미표시, PC 전용 워프 버그 등을 찾아 보고해 우수 학생으로 선정. 보고회에서 제안한 칭호 시스템과 스터디윗미 시스템이 채택됐습니다.</em></li>
-          <li id="council"><strong>메타버스&amp;게임학과 제2대 학생회장</strong><span>2025.02 – 2026.03</span>
-            <em>투표율 학과대항전 96.58%로 전체 학과 1위, MT 참여율 84%, 임기 만족도 평균 4.6점(50명 응답).</em></li>
-          <li>순천향대 SW융합대학 제4기 SW프런티어<span>2025.04 – 2025.10</span></li>
-          <li>게임사운드디자인전문가과정 수료(충남글로벌게임센터)<span>2026.09</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" class="section wrap" aria-labelledby="skills-title">
-    <h2 id="skills-title" class="section-title">기술</h2>
-    <dl class="skills">
-      <div><dt>엔진</dt><dd>Unity, Roblox Studio, Unreal Engine</dd></div>
-      <div><dt>언어</dt><dd>C#, C++, Python, Luau</dd></div>
-      <div><dt>사운드</dt><dd>Ableton Live, REAPER, Cubase, Unity AudioMixer</dd></div>
-      <div><dt>서버&middot;연동</dt><dd>Flask, OpenAI GPT API</dd></div>
-      <div><dt>미들웨어</dt><dd>Wwise(Wwise-301 과정 학습)</dd></div>
-    </dl>
-  </section>
+  <footer class="n-foot">
+    <p>카드를 누르면 프로젝트별 상세 페이지와 플레이 영상을 볼 수 있습니다.</p>
+    <p class="muted">이전 버전 디자인: <a href="v1/">rkdwlals.github.io/v1</a></p>
+  </footer>
 </main>
-
-<footer id="contact" class="site-foot">
-  <div class="wrap">
-    <h2 class="section-title">연락</h2>
-    <p><a href="mailto:jimin041002@gmail.com">jimin041002@gmail.com</a></p>
-    <p><a href="https://github.com/rkdwlals">github.com/rkdwlals</a></p>
-  </div>
-</footer>
-
-<script src="main.js"></script>
 </body>
 </html>

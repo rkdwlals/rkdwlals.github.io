@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LLM–WFC 장애물 배치 | 강지민</title>
+<meta name="description" content="말로 지시하면 규칙을 지키는 장애물 배치 초안을 만드는 도구">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="../notion.css">
+</head>
+<body>
+<header class="n-top"><span class="n-crumb"><a href="../index.html">강지민 | 게임 개발자</a> / LLM–WFC 장애물 배치</span><a class="n-top-link" href="https://github.com/rkdwlals" target="_blank" rel="noopener">GitHub</a></header>
+<main class="n-page detail">
+  <h1 class="n-title">LLM 기반 WFC 제약 생성을 통한 프롬프트 기반 장애물 배치</h1>
+  <div class="n-props">
+<div class="n-prop"><div class="n-prop-k">기간</div><div class="n-prop-v">2026.10</div></div>
+<div class="n-prop"><div class="n-prop-k">분류</div><div class="n-prop-v"><span class="n-tag c-blue">연구</span><span class="n-tag c-red">학술제 본선</span></div></div>
+<div class="n-prop"><div class="n-prop-k">형태</div><div class="n-prop-v">1인 연구·개발 (지도교수 지도)</div></div>
+<div class="n-prop"><div class="n-prop-k">도구</div><div class="n-prop-v">Unity 6, C#, Ollama, gemma4:e4b</div></div>
+<div class="n-prop"><div class="n-prop-k">한 줄 소개</div><div class="n-prop-v">말로 지시하면 규칙을 지키는 장애물 배치 초안을 만드는 도구</div></div>
+  </div>
+  <a class="n-back" href="../index.html#projects">◀ 돌아가기</a>
+  <div class="media">
+<img alt="Unity 데모 화면. 왼쪽 패널에 자연어 명령과 LLM이 뽑은 구역별 밀도·종류 가중치가 있고, 오른쪽에 명령 없이 WFC만 쓴 맵과 LLM 제약을 넣은 맵이 나란히 있다. 제안 기법 맵은 북서쪽과 남동쪽 연못 주변에 수풀이 몰려 있고 가운데가 비어 있다." class="media-img" height="840" loading="lazy" src="../assets/img/wfc-demo.jpg" width="2000"/>
+<p class="media-note">Unity 데모. 명령 “수풀 비중 높게 가고, 서북쪽이랑 동남쪽 연못 부근에 몰아 줘. 가운데랑 남서쪽은 널찍하게 비우고 나머지 장애물은 띄엄띄엄”을 LLM이 북서·동·남동 ‘높음’, 수풀 ×3.0으로 바꿨습니다. 왼쪽은 명령 없이 WFC만 쓴 맵, 오른쪽은 같은 seed에 제약을 넣은 맵이며 상단에 경로 확보·인접 규칙 위반 0칸·지형 침범 0칸 검사 결과가 표시됩니다.</p>
+</div>
+  <div class="n-body">
+
+<p>“서쪽은 빽빽하게, 동쪽은 비워 줘”처럼 말로 지시하면, 강·연못을 침범하지 않고 출발점에서 도착점까지 길을 남기는 장애물 배치 초안을 만드는 도구입니다. LLM은 명령의 의도를 JSON 제약으로 바꾸고, 실제 배치는 규칙 기반 WFC(Wave Function Collapse)가 맡습니다.</p>
+
+<h2 class="n-h2">개발</h2>
+<ul class="n-list">
+<li>LLM이 3×3 구역별 밀도(low/mid/high), 장애물 종류 비중, 경로 필수 여부를 JSON으로 출력하게 하고, 형식·값 범위를 검사해 어긋난 항목만 기본값으로 바꾸는 단계를 만들었습니다.</li>
+<li>WFC 배치: 물·다리·시작점·목표점 칸 고정 → 경로 선확보 → 칸별 가중치 → 인접 규칙을 지키며 칸 확정·전파 → 실패 시 seed를 바꿔 최대 20회 재생성.</li>
+<li>8GB GPU에서 도는 공개 모델 3종을 파일럿으로 비교해, 형식을 모두 지키고 가장 빠른 gemma4:e4b를 골랐습니다.</li>
+<li>WFC 단독, LLM 직접 생성, 키워드 규칙 변환과 같은 목표 맵 20개로 비교했습니다. 구역 밀도 오차는 WFC 단독 대비 47%, 처음 보는 말투에서는 키워드 규칙 대비 37% 줄었고(Wilcoxon, Holm 보정 p&lt;0.01), 인접 규칙·지형 침범 위반은 0/2,400이었습니다.</li>
+</ul>
+<p class="callout"><span aria-hidden="true" class="callout-icon">👥</span>한계: 목표 맵을 이 시스템의 WFC로, 실험 명령을 AI로 만들었기 때문에 사람이 만든 맵과 레벨 디자이너의 실제 명령으로 다시 검증해야 합니다.</p>
+
+
+  </div>
+  <nav class="n-pager"><a href="lostark.html">← 로스트아크 버서커 소개 영상 사운드</a><a href="sleep.html">안면 인식 졸음 방지 →</a></nav>
+</main>
+</body>
+</html>
