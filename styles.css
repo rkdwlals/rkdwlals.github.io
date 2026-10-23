@@ -209,3 +209,9 @@ a:focus-visible, button:focus-visible, video:focus-visible, .track-scroll:focus-
 .media-img { display: block; width: 100%; height: auto; border-radius: var(--radius-m); background: var(--surface); }
 .media-sub { margin-top: 16px; }
 #llmwfc { grid-template-columns: minmax(0, 1fr); gap: 20px; } #llmwfc .body { max-width: 760px; }
+.list-wide { max-width: 100%; }
+.list-media-row { display: grid; grid-template-columns: 1.8fr 1fr; gap: 12px; margin-top: 12px; align-items: start; }
+.list-media-row figure { margin: 0; }
+.list-media-row img { display: block; width: 100%; height: auto; border-radius: var(--radius-m); background: #000; }
+.list-media-row figcaption { margin-top: 6px; font-size: 14px; color: var(--muted); }
+@media (max-width: 600px) { .list-media-row { grid-template-columns: minmax(0, 1fr); } }

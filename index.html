@@ -376,10 +376,19 @@ public void PlayParry() =&gt; PlayClip(parryClip, 1f);</code></pre>
       <li id="sleep">
         <h3>안면 인식 졸음 방지 시스템</h3>
         <p>2023년 10월~12월, 학술제 발표. MediaPipe Face Mesh로 눈 위·아래 랜드마크 사이 거리를 재서, 눈을 감은 상태가 이어지면 경고음을 울리고 카카오톡 &lsquo;나에게 보내기&rsquo;로 알림을 보냅니다. Python, OpenCV, MediaPipe. <a href="https://github.com/rkdwlals/Ai_SleepDetact">GitHub</a></p>
+              <video class="list-video list-wide" controls preload="metadata" playsinline poster="assets/img/sleep-detect-poster.jpg">
+          <source src="assets/video/sleep-detect-demo.mp4" type="video/mp4">
+        </video>
+        <p class="media-note">시연 영상. 웹캠 창에서 눈 랜드마크를 추적하다가 졸음으로 판단하면 경고음과 함께 카카오톡 메시지가 오고, 메시지의 버튼으로 잠 깨는 음악 영상을 엽니다.</p>
       </li>
       <li id="facecam">
         <h3>얼굴 포커싱 직캠 모듈</h3>
         <p>2025년 5월~6월, 영상처리 강의 과제. InsightFace(SCRFD)로 영상 속 얼굴을 검출해 번호를 붙이고, 고른 사람의 얼굴 주변을 잘라 확대한 직캠 영상을 저장합니다. 확대 정도는 트랙바로 조절합니다. Python, OpenCV, InsightFace. <a href="https://github.com/rkdwlals/Face_Focusing">GitHub</a></p>
+              <div class="list-media-row">
+          <figure><img src="assets/img/facecam-detect.jpg" width="1957" height="1073" loading="lazy" alt="무대 영상 한 프레임에서 다섯 사람의 얼굴에 초록 상자와 0~4 번호를 붙인 검출 화면"><figcaption>얼굴 검출과 번호 붙이기</figcaption></figure>
+          <figure><img src="assets/img/facecam-focus.jpg" width="678" height="512" loading="lazy" alt="3번 얼굴 주변만 잘라 검은 화면 가운데에 확대해 놓은 직캠 출력 화면"><figcaption>3번을 골랐을 때의 직캠 출력</figcaption></figure>
+        </div>
+        <p class="media-note">원본은 방송 무대 영상이며 저작권은 원저작자에게 있습니다. 과제 시연용으로만 사용했습니다.</p>
       </li>
     </ul>
   </section>
