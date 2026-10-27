@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>오버워치 2 UI/UX 개선 제안 | 강지민</title>
+<meta name="description" content="오버워치 2의 HUD와 스킬 안내를 분석해 숨은 조작 규칙과 사거리 정보를 보여주는 개선안을 제안한 수업 과제">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../notion.css">
+</head>
+<body>
+<header class="n-top"><span class="n-crumb"><a href="../index.html">강지민 | 게임 개발자</a> / 오버워치 2 UI/UX 개선 제안</span><a class="n-top-link" href="https://github.com/rkdwlals" target="_blank" rel="noopener">GitHub</a></header>
+<main class="n-page detail">
+  <h1 class="n-title">오버워치 2 UI/UX 개선 제안</h1>
+  <div class="n-props">
+<div class="n-prop"><div class="n-prop-k">기간</div><div class="n-prop-v">2026년 1학기</div></div>
+<div class="n-prop"><div class="n-prop-k">분류</div><div class="n-prop-v"><span class="n-tag c-purple">UI/UX 분석</span><span class="n-tag c-gray">개선 제안</span></div></div>
+<div class="n-prop"><div class="n-prop-k">형태</div><div class="n-prop-v">‘게임UI/UX실습’ 과제, 3인 팀</div></div>
+<div class="n-prop"><div class="n-prop-k">담당</div><div class="n-prop-v">개인 조사: 정보 구조(IA)·유저 플로우 분석, 탱커 영웅 HUD 분석<br>팀 공동: 개선 프로토타입 4종</div></div>
+<div class="n-prop"><div class="n-prop-k">도구</div><div class="n-prop-v">Figma (프로토타입 시안)</div></div>
+<div class="n-prop"><div class="n-prop-k">한 줄 소개</div><div class="n-prop-v">오버워치 2의 HUD와 스킬 안내를 분석해, 화면에 드러나지 않는 조작 규칙과 사거리·궤적 정보를 보여주는 개선안을 제안</div></div>
+<div class="n-prop"><div class="n-prop-k">링크</div><div class="n-prop-v"><a href="https://github.com/rkdwlals/Overwatch_UI-UX" target="_blank" rel="noopener">GitHub에서 PDF 보기</a></div></div>
+  </div>
+  <a class="n-back" href="../index.html#uiux">◀ 돌아가기</a>
+  <div class="media"><figure class="n-fig"><img src="../assets/img/ow-poster.jpg" alt="개선 프로토타입 02. 전체 점수판을 열지 않아도 화면 우상단 오버레이로 아군 4인의 궁극기 게이지를 확인하는 Before와 After 시안" loading="lazy"><figcaption>팀 프로토타입 02. 전체 점수판(Tab)을 열지 않고도 우상단 오버레이로 아군 궁극기 현황을 보는 시안</figcaption></figure></div>
+  <div class="n-body">
+
+<p>오버워치 2를 플레이하며 직접 캡처한 화면을 바탕으로, 인게임 HUD와 영웅 스킬 안내를 네 가지 기준으로 평가했습니다. 시인성(교전 중에도 정확히 보이는가), 행동 유도성(형태만 보고 조작을 유추할 수 있는가), 정합성(원작 경험을 유지하며 혼잡을 줄였는가), 일관성(영웅별 표기가 통일되어 있는가)입니다.</p>
+
+<h2 class="n-h2">개인 조사 ① 정보 구조(IA)·유저 플로우</h2>
+<ul class="n-list">
+<li>영웅 선택, 메인 HUD, 전황판(Tab), 시스템 메뉴(Esc), 경기 종료 화면에 어떤 정보가 있는지 화면별로 정리했습니다.</li>
+<li>매칭부터 로비 복귀까지의 흐름을 8단계로 나눴습니다.</li>
+<li>사망 후 킬캠을 보고 영웅을 바꿔 복귀하는 카운터 픽 루프, 패배 후 스킵할 수 없는 POTG와 추천 투표로 감정을 전환시키는 경기 종료 흐름을 UX 관점에서 분석했습니다.</li>
+</ul>
+<figure class="n-fig"><img src="../assets/img/ow-ia.jpg" alt="인게임 정보 구조도 1부. 영웅 선택 화면과 기본 플레이 HUD의 구성 요소를 정리한 페이지" loading="lazy"><figcaption>인게임 정보 구조도: 영웅 선택 화면과 메인 HUD</figcaption></figure>
+<figure class="n-fig"><img src="../assets/img/ow-flow.jpg" alt="핵심 유저 플로우 2부. 본 경기 진행부터 공수 교대, 승패 연출, POTG와 추천, 진척도 정산까지 5단계를 정리한 페이지" loading="lazy"><figcaption>핵심 유저 플로우: 본 경기부터 로비 복귀까지</figcaption></figure>
+
+<h2 class="n-h2">개인 조사 ② 탱커 영웅 HUD 분석</h2>
+<p>레킹볼, 윈스턴, 로드호그, 라마트라, 정커퀸, 둠피스트, 해저드와 스킬창·스코어보드를 분석했습니다. 스킬 설명과 실제 동작이 다른 부분, 조작 규칙이 화면에 안내되지 않는 부분을 찾는 데 집중했습니다.</p>
+<ul class="n-list">
+<li>윈스턴 방벽은 설명에 ‘반구 형태’로 적혀 있지만, 공중에 설치하면 구 형태로 생깁니다. 설명을 고도에 맞게 고치자고 제안했습니다.</li>
+<li>로드호그 숨돌리기는 E키를 다시 누르면 회복을 멈출 수 있지만 HUD 어디에도 안내가 없습니다. 상태창에 취소 안내를 넣자고 제안했습니다.</li>
+<li>해저드는 ‘베기’의 발사와 회수가 같은 Shift 키인데도 조작 안내가 화면 양쪽에 중복으로 나옵니다. 중앙 한 곳으로 합치자고 제안했습니다.</li>
+</ul>
+<figure class="n-fig"><img src="../assets/img/ow-tank.jpg" alt="레킹볼과 윈스턴 분석 페이지. 방벽 전달 범위 미표시 문제와 윈스턴 방벽 형태 설명 불일치 문제, 각각의 개선 제안" loading="lazy"><figcaption>레킹볼·윈스턴 분석: 방벽 범위 시각화, 방벽 형태 설명 정정</figcaption></figure>
+
+<h2 class="n-h2">팀 공동 작업</h2>
+<ul class="n-list">
+<li>역할군과 실력대가 다른 가상 유저 페르소나 4명을 설정해 시나리오를 분석했습니다.</li>
+<li>Figma로 개선 프로토타입 4종의 Before → After 시안을 만들었습니다: 영웅 정보창 정량 수치 표기, 아군 궁극기 오버레이, 조준·탄약 HUD, 무기 회수 인디케이터.</li>
+<li>영향도와 시야 차단 정도에 따라 개선 우선순위를 정리했습니다.</li>
+</ul>
+<figure class="n-fig"><img src="../assets/img/ow-proto-skill.jpg" alt="개선 프로토타입 01. 토르비욘 영웅 정보창에 공격 유형과 공격력, 쿨타임, 사거리 수치를 표기한 Before와 After 시안" loading="lazy"><figcaption>팀 프로토타입 01. 영웅 정보창에 공격력·쿨타임·사거리 수치 표기 (토르비욘)</figcaption></figure>
+
+<p class="callout"><span aria-hidden="true" class="callout-icon">📌</span>페르소나는 가상으로 설정한 인물이며, 실제 사용성 테스트는 진행하지 않았습니다. 스크린샷은 직접 플레이하며 캡처했고, 오버워치의 저작권은 Blizzard Entertainment에 있습니다.</p>
+
+  </div>
+  <nav class="n-pager"><a href="lostark.html">← 로스트아크 버서커 소개 영상 사운드</a><a href="llmwfc.html">LLM–WFC 장애물 배치 →</a></nav>
+</main>
+</body>
+</html>
